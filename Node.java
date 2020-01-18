@@ -1,3 +1,5 @@
+package code;
+
 import code.State;
 
 /**
@@ -57,17 +59,24 @@ public class Node {
      */
     public void addChildNode(Node adj){
         adj.state = State.Unvisited;
-        if(childCount < 30)
-        {
+        if(childCount < 30){
             this.child[childCount] = adj;
             childCount++;
         }
     }
 
+    /**
+     * accessor for child
+     * @return array of type Node, public variable child.
+     */
     public Node[] getChild(){
         return child;
     }
 
+    /**
+     * accessor for string
+     * @return string, the vertex of this Node.
+     */
     public String getVertex(){
         return vertex;
     }

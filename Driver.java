@@ -1,3 +1,5 @@
+package code;
+
 /**
  * Driver class
  * Contains one method, which builds a new graph
@@ -15,9 +17,12 @@ public class Driver {
      * @return: g of type Graph, the graph we just built.
      */
 	public static Graph createNewGraph(){
-		Graph g = new Graph();
+        Graph g = new Graph();
+        //set the size of our graph (which in this case is a tree, preferably a birch tree, I like their white bark).
 		Node[] temp = new Node[8];
-		
+        
+        //new Node, check out Node.java (2nd constructor) to fully understand this....
+        //but, we are adding a new Node with vertex "A" and a hild of length 3.
 		temp[0] = new Node("A", 3);
 		temp[1] = new Node("B", 3);
 		temp[2] = new Node("C", 1);

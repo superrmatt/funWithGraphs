@@ -12,13 +12,13 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 - **State.java** is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class.
 - **BreadthFirst.java** is where we run our bread first search (bfs). The bfs takes a param of type Node in its only function (bfs), and scans all root nodes. It is best to use the root node of the graph to find odd cycles, although, you could detect odd cycles within a graph, if you so desire. by that, I mean, one could easily use a non-root node.
 
-## More on Node.java & Graph.java
+### More on Node.java & Graph.java
 - A Node is the smallest, indivisable unit of a graph.
 - A node has its vertex (value) and its children, if any.
 - So, say we have Node A, with two children, B and C. Our graph would look something like this:
-                  A
-                 / \
-                B   C
+&nbsp;&nbsp;&nbsp;&nbsp;A
+&nbsp;&nbsp;&nbsp;&nbsp;/ \
+&nbsp;&nbsp;&nbsp;&nbsp;B   C
 - Therefore, Node A, has two children, in my representation of a Node, that would be represented as an array of Nodes: [B,C]. What if children looks like this: [B,C,D]?
                     D 
                      \
@@ -73,9 +73,9 @@ FYI: Wikipedia is a great source of information, but I cannot stress enough the 
 
 ### Sources:
 Taught me everything I know about Data structures & algorithms, their design & their analysis.
-- Dr. Kevin McCullen, Associate Professor at SUNY College at Plattsburgh.
-- Martin Mailloux, Assistant Professor at SUNY College at Plattsburgh.
-- Dr. Delbert Hart, Associate Professor at SUNY College at Plattsburgh.
-- Dr. Hung Ngo, Associate Professor at University at Buffalo.
-- Dr Carl Alphonce, Associate Professor at University at Buffalo.
+- Dr. Kevin McCullen, Associate Professor of computer science at SUNY College at Plattsburgh.
+- Martin Mailloux, Assistant Professor of computer science at SUNY College at Plattsburgh.
+- Dr. Delbert Hart, Associate Professor of computer science at SUNY College at Plattsburgh.
+- Dr. Hung Ngo, Associate Professor of computer science at University at Buffalo.
+- Dr Carl Alphonce, Associate Professor of computer science at University at Buffalo.
 - The vastness of the interwebs

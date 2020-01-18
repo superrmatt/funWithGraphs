@@ -25,7 +25,7 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 ### More on Node.java & Graph.java
 - A Node is the smallest, indivisable unit of a graph.
 - A node has its vertex (value) and its children, if any.
-- So, say we have Node A, with two children, B and C. This constitutes graph W. Our graph X would look something like this: <br/>
+- So, say we have Node A, with two children, B and C. This constitutes graph W. Our graph W would look something like this: <br/>
 >                         A 
 >                        / \ 
 >                       B   C

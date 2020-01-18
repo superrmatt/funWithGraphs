@@ -1,16 +1,18 @@
 # Odd Cycle Detector
 
+##Intro##
 Java program which builds a graph, and detects if there exists an odd cycle.
 A graph does not contain a cycle of odd length if and only if it is bipartite.
 If a graph has an odd length cycle, then it cannot be bipartite. In bipartite graphs, there exist two sets of vertices, such that no vertex in a set is connected with any other vertex of the same set.
 
+##Components##
 - **Driver.java** builds a graph of user choosing. Driver.java can be edited to build a custom graph, then detects if the graph has any odd cycles.
 - **Node.java** consists of the class Node, which is what makes up each node of our graph. A node has its children (if any), its vertex, its childcount, and its State (see state.java). You can add a child, get a child, or get a vertex.
 - **Graph.java** consists of the class graph. A graph has its vertex count, and its vertices. You can add a Node or get a Node.
 - **State.java** is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class.
 - **BreadthFirst.java** is where we run our bread first search (bfs). The bfs takes a param of type Node in its only function (bfs), and scans all root nodes. It is best to use the root node of the graph to find odd cycles, although, you could detect odd cycles within a graph, if you so desire. by that, I mean, one could easily use a non-root node.
 
-**More on Node.java**
+##More on Node.java & Graph.java##
 - A Node is the smallest, indivisable unit of a graph.
 - A node has its vertex (value) and its children, if any.
 - So, say we have Node A, with two children, B and C. Our graph would look something like this:
@@ -44,13 +46,13 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 
 
 
-**Coming soon:**
+##Coming soon:##
 - Depth First Search to find odd cycles.
 - Remove node from graph
 - Remove children from Node (might get funky, probably best accomplished in graph class, or at least with help from graph class).
 - Other operations on graphs, graphs are cool, at which point I will change the name of this repo to better align with that. "graphsAreFun" perhaps
 
-**Supplemental Reading:** <br/>
+##Supplemental Reading:##
 FYI: Wikipedia is a great source of information, but I cannot stress enough the importance of using other sources for information due to wikipedias ease of editing.
 
 1. Basic -> Advanced Discrete Mathematics: https://brilliant.org/wiki/discrete-mathematics/
@@ -69,7 +71,7 @@ FYI: Wikipedia is a great source of information, but I cannot stress enough the 
 14. Undirected Graph: https://mathinsight.org/definition/undirected_graph
 15. Directed Graph: https://en.wikipedia.org/wiki/Directed_graph
 
-**Sources:**
+##Sources:##
 Taught me everything I know about Data structures & algorithms, their design & their analysis.
 - Dr. Kevin McCullen, Associate Professor at SUNY College at Plattsburgh.
 - Martin Mailloux, Assistant Professor at SUNY College at Plattsburgh.

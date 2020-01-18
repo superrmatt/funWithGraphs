@@ -32,7 +32,7 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;\ <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;C <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;\ <br/>
-                  E   F
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;F <br/>
 - Lastly, we can also establish that B also has a child in C. So, the children of B are [C,E,F]: <br/>
                     D 
                      \

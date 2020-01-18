@@ -16,7 +16,7 @@ A graph does not contain a cycle of odd length if and only if it is bipartite.
 If a graph has an odd length cycle, then it cannot be bipartite. In bipartite graphs, there exist two sets of vertices, such that no vertex in a set is connected with any other vertex of the same set. In lehman's terms, this simply means that a graph with an odd number of edges, or children, is not bipartite, or cannot be traveresed, and therefore, has at least one odd cycle.
 
 ### Components
-- **Driver.java** builds a graph of user choosing. Driver.java can be edited to build a custom graph, then detects if the graph has any odd cycles.
+- **Driver.java** builds a graph of user choosing. Driver.java can be edited to build a custom graph, then uses BreadthFirst.java to detect if the graph has any odd cycles.
 - **Node.java** consists of the class Node, which is what makes up each node of our graph. A node has its children (if any), its vertex, its childcount, and its State (see state.java). You can add a child, get a child, or get a vertex.
 - **Graph.java** consists of the class graph. A graph has its vertex count, and its vertices. You can add a Node or get a Node.
 - **State.java** is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class.

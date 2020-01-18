@@ -31,11 +31,11 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 >                        / \ 
 >                       B   C
 - Therefore, Node A, has two children, in my implemention of a Node, that would be represented as an array of Nodes: [B,C]. What if children of Node A looks like this: [B,C,D]? THis would constitute graph X </br>
-                       D 
-                        \ 
-                         A 
-                        / \ 
-                       B   C
+>                       D 
+>                        \ 
+>                         A 
+>                        / \ 
+>                       B   C
 - Now, let's say Node B also has two children [E,F], making graph Y. <br/>
 >                       D 
 >                        \ 

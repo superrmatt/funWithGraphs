@@ -1,6 +1,6 @@
 # Odd Cycle Detector
 
-Java program which builds an original graph, and detects if there exists an odd cycle.
+Java program which builds a graph, and detects if there exists an odd cycle.
 A graph does not contain a cycle of odd length if and only if it is bipartite.
 If a graph has an odd length cycle, then it cannot be bipartite. In bipartite graphs, there exist two sets of vertices, such that no vertex in a set is connected with any other vertex of the same set.
 
@@ -45,13 +45,13 @@ More on Node.java
 
 
 
-Coming soon:
+Coming soon: <br/>
 - Depth First Search to find odd cycles.
 - Remove node from graph
 - Remove children from Node (might get funky, probably best accomplished in graph class, or at least with help from graph class).
 - Other operations on graphs, graphs are cool, at which point I will change the name of this repo to better align with that. "graphsAreFun" perhaps
 
-Supplemental Reading:
+Supplemental Reading: <br/>
 FYI: Wikipedia is a great source of information, but I cannot stress enough the importance of using other sources for information due to wikipedias ease of editing.
 
 1. Basic -> Advanced Discrete Mathematics: https://brilliant.org/wiki/discrete-mathematics/

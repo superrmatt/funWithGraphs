@@ -8,6 +8,8 @@
 5. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
 6. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
 
+## 
+
 ### Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;Java program which builds a graph, and detects if there exists an odd cycle.
 A graph does not contain a cycle of odd length if and only if it is bipartite.

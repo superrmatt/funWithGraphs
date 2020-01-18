@@ -19,7 +19,7 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 >                         A 
 >                        / \ 
 >                       B   C
-- Therefore, Node A, has two children, in my representation of a Node, that would be represented as an array of Nodes: [B,C]. What if children looks like this: [B,C,D]? </br>
+- Therefore, Node A, has two children, in my implemention of a Node, that would be represented as an array of Nodes: [B,C]. What if children looks like this: [B,C,D]? </br>
 >                       D 
 >                        \ 
 >                         A 
@@ -77,5 +77,5 @@ Taught me everything I know about Data structures & algorithms, their design & t
 - Martin Mailloux, Assistant Professor of computer science at SUNY College at Plattsburgh.
 - Dr. Delbert Hart, Associate Professor of computer science at SUNY College at Plattsburgh.
 - Dr. Hung Ngo, Associate Professor of computer science at University at Buffalo.
-- Dr Carl Alphonce, Associate Professor of computer science at University at Buffalo.
-- The vastness of the interwebs
+- Dr. Carl Alphonce, Associate Professor of computer science at University at Buffalo.
+- The vastness and endlessness of the interwebs

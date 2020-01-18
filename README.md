@@ -30,7 +30,7 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 >                        \ 
 >                         A 
 >                        / \ 
->                       B − C
+>                       B   C
 >                      / \
 >                     E   F
 - Lastly, we can also establish that B also has a child in C. So, the children of B are [C,E,F]: <br/>
@@ -38,7 +38,7 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 >                        \ 
 >                         A 
 >                        / \ 
->                       B   C
+>                       B − C
 >                      / \
 >                     E   F
 - All of the above are represented as graphs. And much like the children, they can be represented as an array of Nodes, which is what I did in this implementation of a graph. The first dimension array represents the Node and the 2nd dimension array is each Nodes array of children. [A[B,C,D],B[C,E,F],C[],D[]]

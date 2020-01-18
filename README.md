@@ -17,10 +17,10 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 
 ### Components
 - **Driver.java** builds a graph of user choosing. Driver.java can be edited to build a custom graph, then uses BreadthFirst.java to detect if the graph has any odd cycles.
-- **Node.java** consists of the class Node, which is what makes up each node of our graph. A node has its children (if any), its vertex, its childcount, and its State (see state.java). You can add a child, get a child, or get a vertex.
+- **Node.java** consists of the class Node, which is what makes up each node of our graph. A node has its children (if any), its vertex, its childcount, and its State (see State.java). You can add a child, get a child, or get a vertex.
 - **Graph.java** consists of the class graph. A graph has its vertex count, and its vertices. You can add a Node or get a Node.
-- **State.java** is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class.
-- **BreadthFirst.java** is where we run our breadth first search (bfs). The bfs takes a parameter of type Node in its only function (bfs), and scans all child nodes. It is best to use the root node of the graph to find odd cycles, although, you could detect odd cycles within a subgraph of the graph, if you so desire. by that, I mean, one could easily use a non-root node. If the graph is cyclic, any Node will suffice.
+- **State.java** is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class Node.
+- **BreadthFirst.java** is where we run our breadth first search (bfs). The bfs takes a parameter of type Node in its only function (bfs), and scans all child nodes. It is best to use the root node of the graph to find odd cycles, although, you could detect odd cycles within a subgraph of the graph, if you so desire. By that, I mean, one could easily use a non-root node. If the graph is cyclic, any Node will suffice.
 
 ### More on Node.java & Graph.java
 - A Node is the smallest, indivisable unit of a graph.

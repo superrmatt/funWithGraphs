@@ -6,7 +6,6 @@ package code;
  * Learn more about what a graph is here: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
  * THe graph here is predetermined, a keen mind could see how this could be manipulated
  * to create whatever graph we want.
- * For this use, our graph exists as a tree. particulalry, a binary search tree (bst)
  * @author: superrmatt 
  */
 public class Driver {
@@ -18,7 +17,7 @@ public class Driver {
      */
 	public static Graph createNewGraph(){
         Graph g = new Graph();
-        //set the size of our graph (which in this case is a tree, preferably a birch tree, I like their white bark).
+        //set the size of our graph
 		Node[] temp = new Node[8];
         
         //new Node, check out Node.java (2nd constructor) to fully understand this....

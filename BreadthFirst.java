@@ -14,7 +14,7 @@ public class BreadthFirst {
 	/**
 	 * bfs...Breadth First Search. Learn more here: https://en.wikipedia.org/wiki/Breadth-first_search
 	 * Here, we are looking for odd cycles. Learn more here: https://www.geeksforgeeks.org/check-graphs-cycle-odd-length/
-	 * @param type Node: the root of our Graph, or Binary Search Tree.
+	 * @param type Node: the root of our graph
 	 */
 	public void bfs(Node root){
 		Queue<Node> que = new LinkedList<Node>();

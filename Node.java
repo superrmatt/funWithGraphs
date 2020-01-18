@@ -4,7 +4,7 @@ import code.State;
 
 /**
  * Node Node Node.
- * Class Node is used to build our graph, which in this case is a tree.
+ * Class Node is used to build our graph
  * Question is, is it a BST? run the driver to find out!
  */
 public class Node {

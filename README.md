@@ -1,6 +1,7 @@
 # oddCycleDetector
 
-
+Odd Cycle Detector.
+Java program which builds an original graph (in its default form, we have here a Binary Tree)
 
 Coming soon:
 Depth First Search to find odd cycles.

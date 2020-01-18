@@ -1,5 +1,13 @@
 # Odd Cycle Detector
 
+## Table of Contents
+1. [Introduction] (#Introduction)
+2. [Components]
+3. [More on Node.java & Graph.java]
+4. [Coming Soon]
+5. [Supplemental Reading]
+6. [Sources]
+
 ### Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;Java program which builds a graph, and detects if there exists an odd cycle.
 A graph does not contain a cycle of odd length if and only if it is bipartite.

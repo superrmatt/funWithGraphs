@@ -1,7 +1,3 @@
-package code;
-
-import code.State;
-
 /**
  * Node Node Node.
  * Class Node is used to build our graph

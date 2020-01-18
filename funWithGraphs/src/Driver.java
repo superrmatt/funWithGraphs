@@ -1,5 +1,3 @@
-package code;
-
 /**
  * Driver class
  * Contains one method, which builds a new graph

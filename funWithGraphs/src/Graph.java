@@ -1,5 +1,3 @@
-package code;
-
 /**
  * Graph class, the actual data structure.
  * In memory, it is stored as an array of Nodes.

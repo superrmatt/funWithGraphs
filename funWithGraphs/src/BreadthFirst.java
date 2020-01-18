@@ -1,5 +1,3 @@
-package code;
-
 /**
  * @author: superrmatt
  */

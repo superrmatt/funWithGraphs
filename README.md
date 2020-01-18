@@ -15,17 +15,17 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 ### More on Node.java & Graph.java
 - A Node is the smallest, indivisable unit of a graph.
 - A node has its vertex (value) and its children, if any.
-- So, say we have Node A, with two children, B and C. Our graph would look something like this:
+- So, say we have Node A, with two children, B and C. Our graph would look something like this: <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;A
 &nbsp;&nbsp;&nbsp;&nbsp;/ \
 &nbsp;&nbsp;&nbsp;&nbsp;B   C
-- Therefore, Node A, has two children, in my representation of a Node, that would be represented as an array of Nodes: [B,C]. What if children looks like this: [B,C,D]?
+- Therefore, Node A, has two children, in my representation of a Node, that would be represented as an array of Nodes: [B,C]. What if children looks like this: [B,C,D]? </br>
                     D 
                      \
                       A
                      / \
                     B   C
-- Now, let's say Node B also has two children [E,F].
+- Now, let's say Node B also has two children [E,F]. <br/>
                     D 
                      \
                       A
@@ -33,7 +33,7 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
                     B   C
                    / \
                   E   F
-- Lastly, we can also establish that B also has a child in C. So, the children of B are [C,E,F]:
+- Lastly, we can also establish that B also has a child in C. So, the children of B are [C,E,F]: <br/>
                     D 
                      \
                       A

@@ -1,12 +1,12 @@
 # Odd Cycle Detector
 
 ## Table of Contents
-- [Introduction](https://github.com/superrmatt/oddCycleDetector#introduction)
-2. [Components]
-3. [More on Node.java & Graph.java]
-4. [Coming Soon]
-5. [Supplemental Reading]
-6. [Sources]
+1. [Introduction](https://github.com/superrmatt/oddCycleDetector#introduction)
+2. [Components](https://github.com/superrmatt/oddCycleDetector#components)
+3. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
+4. [Coming Soon](https://github.com/superrmatt/oddCycleDetector#coming-soon)
+5. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
+6. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
 
 ### Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;Java program which builds a graph, and detects if there exists an odd cycle.
@@ -88,4 +88,4 @@ Taught me everything I know about Data structures & algorithms, their design & t
 - Dr. Delbert Hart, Associate Professor of computer science at SUNY College at Plattsburgh.
 - Dr. Hung Ngo, Associate Professor of computer science at University at Buffalo.
 - Dr. Carl Alphonce, Associate Professor of computer science at University at Buffalo.
-- The vastness and endlessness of the interwebs
+- The vastness, boundless, and endlessness vaults of the interwebs.

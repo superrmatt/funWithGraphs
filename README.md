@@ -36,8 +36,8 @@ FYI: Wikipedia is a great source of information, but I cannot stress enough the 
 
 Sources:
 Taught me everything I know about Data structures & algorithms, their design & their analysis.
-Dr. Kevin McCullen, Associate Professor at SUNY College at Plattsburgh.
-Martin Mailloux, Assistant Professor at SUNY College at Plattsburgh.
-Dr. Delbert Hart, Associate Professor at SUNY College at Plattsburgh.
-Dr. Hung Ngo, Associate Professor at University at Buffalo.
-Dr Carl Alphonce, Associate Professor at University at Buffalo.
+- Dr. Kevin McCullen, Associate Professor at SUNY College at Plattsburgh.
+- Martin Mailloux, Assistant Professor at SUNY College at Plattsburgh.
+- Dr. Delbert Hart, Associate Professor at SUNY College at Plattsburgh.
+- Dr. Hung Ngo, Associate Professor at University at Buffalo.
+- Dr Carl Alphonce, Associate Professor at University at Buffalo.

@@ -5,8 +5,9 @@
 2. [Components](https://github.com/superrmatt/oddCycleDetector#components)
 3. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
 4. [Coming Soon](https://github.com/superrmatt/oddCycleDetector#coming-soon)
-5. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
-6. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
+5. [Cycle Graphs](https://github.com/superrmatt/oddCycleDetector#cycle-graphs)
+6. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
+7. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
 
 ## 
 
@@ -52,7 +53,10 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 >                      / \
 >                     E   F
 - All of the above are represented as graphs. And much like the children, they can be represented as an array of Nodes, which is what I did in this implementation of a graph. The first dimension array represents the Node and the 2nd dimension array is each Nodes array of children. [A[B,C,D],B[C,E,F],C[],D[]]
-- The final point to make here is, which graph has an odd cycle. Graph Z has an odd cycle because Node B has 3 cycles, and is therefore, not bipartite.
+- The final point to make here is, which graph has an odd cycle. None, because none of those examples are even cycle graphs to begin with.
+
+### Cycle Graphs
+Coming Soon
 
 
 

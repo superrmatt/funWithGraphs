@@ -1,6 +1,6 @@
 # Odd Cycle Detector
 
-## Introduction
+### Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;Java program which builds a graph, and detects if there exists an odd cycle.
 A graph does not contain a cycle of odd length if and only if it is bipartite.
 If a graph has an odd length cycle, then it cannot be bipartite. In bipartite graphs, there exist two sets of vertices, such that no vertex in a set is connected with any other vertex of the same set. In lehman's terms, this simply means that a graph with an odd number of edges, or children, is not bipartite, or cannot be traveresed, and therefore, has at least one odd cycle.

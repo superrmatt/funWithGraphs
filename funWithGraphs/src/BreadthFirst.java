@@ -26,8 +26,11 @@ public class BreadthFirst {
 		root.state = State.Visited;
 		que.add(root);
 		
+		int i = 0;
 		while(!que.isEmpty()){
 			Node r = que.remove();
+			i = i + 1;
+			System.out.print(i);
 			
 			for(Node n: r.getChild()){
 				if(n.state == State.Unvisited){

@@ -21,26 +21,24 @@ public class Driver {
 		Node[] temp = new Node[8];
         
         //new Node, check out Node.java (2nd constructor) to fully understand this....
-        //but, we are adding a new Node with vertex "A" and a hild of length 3.
-		temp[0] = new Node("A", 3);
-		temp[1] = new Node("B", 3);
+        //but, we are adding a new Node with vertex "A" and 3 children.
+		temp[0] = new Node("A", 1);
+		temp[1] = new Node("B", 1);
 		temp[2] = new Node("C", 1);
         temp[3] = new Node("D", 1);
         temp[4] = new Node("E", 1);
         temp[5] = new Node("F", 1);
+        temp[6] = new Node("G", 1);
+        temp[7] = new Node("H", 1);
         
         temp[0].addChildNode(temp[1]);
-        temp[0].addChildNode(temp[2]);
-        temp[0].addChildNode(temp[3]);
+        temp[1].addChildNode(temp[2]);
+        temp[2].addChildNode(temp[3]);
 
-        temp[1].addChildNode(temp[0]);
-        temp[1].addChildNode(temp[4]);
-        temp[1].addChildNode(temp[5]);
+        temp[3].addChildNode(temp[4]);
+        temp[4].addChildNode(temp[5]);
+        temp[5].addChildNode(temp[6]);
 
-        temp[2].addChildNode(temp[0]);
-        temp[3].addChildNode(temp[0]);
-        temp[4].addChildNode(temp[1]);
-        temp[5].addChildNode(temp[1]);
         
         for (int i = 0; i < 7; i++){
             g.addNode(temp[i]);
@@ -54,6 +52,7 @@ public class Driver {
      * @arg: array of strings, no args needed here.
      */
 	public static void main(String[] args){
+        System.out.println("running");
 		Graph gBFS = createNewGraph();
 		BreadthFirst BFS = new BreadthFirst();
 		

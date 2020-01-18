@@ -20,6 +20,7 @@ public class Graph {
 		/**
 		 * Constructor! favorite class, always.
 		 * Contructs new instance of type Graph.
+		 * For now hardcoded as 8 for POC.
 		 */
 	    public Graph(){
 	    	_vertices = new Node[8];

@@ -10,6 +10,39 @@ If a graph has an odd length cycle, then it cannot be bipartite. In bipartite gr
 - State.java is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class.
 - BreadthFirst.java is where we run our bread first search (bfs). The bfs takes a param of type Node in its only function (bfs), and scans all root nodes. It is best to use the root node of the graph to find odd cycles, although, you could detect odd cycles within a graph, if you so desire. by that, I mean, one could easily use a non-root node.
 
+More on Node.java
+
+A Node is the smallest, indivisable unit of a graph.
+A node has its vertex (value) and its children, if any.
+So, say we have Node A, with two children, B and C. Our graph would look something like this:
+                  A
+                 / \
+                B   C
+Therefore, Node A, has two children, in my representation of a Node, that would be represented as an array of Nodes: [B,C].
+What if children looks like this: [B,C,D]?
+                    D 
+                     \
+                      A
+                     / \
+                    B   C
+Now, let's say Node B also has two children [E,F].
+                    D 
+                     \
+                      A
+                     / \
+                    B   C
+                   / \
+                  E   F
+Lastly, we can also establish that B also has a child in C. So, the children of B are [C,E,F]:
+                    D 
+                     \
+                      A
+                     / \
+                    B---C
+                   / \
+                  E   F
+All of the above are represented as graphs. And much like the children, they can be represented as an array of Nodes, which is what I did in this implementation of a graph. The first dimension array represents the Node and the 2nd dimension array is each Nodes array of children. [A[B,C,D],B[C,E,F],C[],D[]]
+
 
 
 
@@ -26,13 +59,17 @@ FYI: Wikipedia is a great source of information, but I cannot stress enough the 
 2. Designing and Analyzing Algorithms: https://www.tutorialspoint.com/design_and_analysis_of_algorithms/index.htm
 3. Graph Theory: https://en.wikipedia.org/wiki/Graph_theory
 4. Vertex: https://en.wikipedia.org/wiki/Vertex_(graph_theory)
-5. Tree: https://en.wikipedia.org/wiki/Tree_(data_structure)
-6. Binary Tree: https://en.wikipedia.org/wiki/Binary_tree
-7. General vs Binary Tree: https://www.geeksforgeeks.org/difference-between-general-tree-and-binary-tree/
-8. Binary Search Tree (BST): https://en.wikipedia.org/wiki/Binary_search_tree
-9. BST operations: http://www.bo-yang.net/2014/05/26/binary-tree-traversal
-10. Breadth First Search: https://en.wikipedia.org/wiki/Breadth-first_search
-11. Depth First Search: https://en.wikipedia.org/wiki/Depth-first_search
+5. Cycle: http://mathworld.wolfram.com/GraphCycle.html
+6. Tree: https://en.wikipedia.org/wiki/Tree_(data_structure)
+7. Binary Tree: https://en.wikipedia.org/wiki/Binary_tree
+8. General vs Binary Tree: https://www.geeksforgeeks.org/difference-between-general-tree-and-binary-tree/
+9. Binary Search Tree (BST): https://en.wikipedia.org/wiki/Binary_search_tree
+10. BST Operations: http://www.bo-yang.net/2014/05/26/binary-tree-traversal
+11. Breadth First Search: https://en.wikipedia.org/wiki/Breadth-first_search
+12. Depth First Search: https://en.wikipedia.org/wiki/Depth-first_search
+13. Bidirectional Graph: https://en.wikipedia.org/wiki/Bidirected_graph
+14. Undirected Graph: https://mathinsight.org/definition/undirected_graph
+15. Directed Graph: https://en.wikipedia.org/wiki/Directed_graph
 
 Sources:
 Taught me everything I know about Data structures & algorithms, their design & their analysis.

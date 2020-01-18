@@ -1,3 +1,5 @@
+import State.java;
+
 /**
  * Node Node Node.
  * Class Node is used to build our graph
@@ -8,10 +10,10 @@ public class Node {
     /**
      * Array of Nodes. All children to this node.
      * For example, with the following node 1:
-     *             1
+     *             A
      *            / \
-     *           2   3
-     * child looks like: [2,3]
+     *           B   C
+     * child looks like: [B,C]
      */
     public Node[] child;
     
@@ -31,7 +33,17 @@ public class Node {
     public State state;
 
     /**
-     * Ah, lovely constructors!
+     * parent of type Node, tracks the parent nodes.
+     */
+    public Node[] parent;
+
+    /**
+     * int that tracks the number of parent nodes.
+     */
+    public int parentCount;
+
+    /**
+     * constructor
      * @arg string, the vertex of this
      */
     public Node(String vertex){
@@ -39,9 +51,9 @@ public class Node {
     }
 
     /**
-     * Another constructor! Woohoo!
+     * Another constructor
      * @arg: string, the vertex
-     * @arg length of child as type int. This is where things get tricky, eh?
+     * @arg length of child(ren) as type int.
      */
     public Node(String vertex, int childlen){
         this.vertex = vertex;
@@ -55,10 +67,10 @@ public class Node {
      */
     public void addChildNode(Node adj){
         adj.state = State.Unvisited;
-        if(childCount < 30){
+        //if(childCount < 30){
             this.child[childCount] = adj;
             childCount++;
-        }
+        //}
     }
 
     /**
@@ -75,6 +87,13 @@ public class Node {
      */
     public String getVertex(){
         return vertex;
+    }
+
+    /**
+     * accessor for parents
+     */
+    public Node[] getParents(){
+        return parents;
     }
 
 }

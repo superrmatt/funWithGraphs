@@ -11,7 +11,7 @@ public class Graph {
 		public int _vertexCount;
 		
 		/**
-		 * array of type Node. Our vertices, useful for iteration.
+		 * array of type Node, vertices
 		 */
 	    private Node _vertices[];
 		

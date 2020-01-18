@@ -1,7 +1,7 @@
 # Odd Cycle Detector
 
 ## Table of Contents
-1. [Introduction] (https://github.com/superrmatt/oddCycleDetector#introduction)
+[Introduction] (https://github.com/superrmatt/oddCycleDetector#introduction)
 2. [Components]
 3. [More on Node.java & Graph.java]
 4. [Coming Soon]

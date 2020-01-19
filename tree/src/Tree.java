@@ -78,14 +78,14 @@ public class Tree<T> {
 
         //While queue isn't empty, pop a Node from the queue.
         while(!queue.isEmpty()) {
-             Tree<T> currentNode = queue.remove();
-             System.out.println("currentNode = " +currentNode.getValue());
+             Tree<T> visitingNode = queue.remove();
+             System.out.println("visitingNode = " + visitingNode.getValue());
 
             //If we found the node, return it. Else add all its children to our queue.
-            if (currentNode.getValue().equals(value)) {
-                return Optional.of(currentNode);
+            if (visitingNode.getValue().equals(value)) {
+                return Optional.of(visitingNode);
             } else {
-                queue.addAll(currentNode.getChildren());
+                queue.addAll(visitingNode.getChildren());
             }
         }
         //If queue is empty, node not found.

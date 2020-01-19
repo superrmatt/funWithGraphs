@@ -81,18 +81,18 @@ public class Node<T> {
         Queue<Node<T>> queue = new ArrayDeque<>();
         queue.add(start);
      
-        Node<T> currentNode;
+        Node<T> visitingNode;
      
         while (!queue.isEmpty()) {
-            currentNode = queue.remove();
-            System.out.println("currentNode = " +currentNode.getValue());
+            visitingNode = queue.remove();
+            System.out.println("visitingNode = " + visitingNode.getValue());
          
             //If we found node in question, return it. Else, add this Node to alreadyVisited, add all neighbors to queue, and remove this node from queue.
-            if (currentNode.getValue().equals(value)) {
-                return Optional.of(currentNode);
+            if (visitingNode.getValue().equals(value)) {
+                return Optional.of(visitingNode);
             } else {
-                alreadyVisited.add(currentNode);
-                queue.addAll(currentNode.getNeighbors());
+                alreadyVisited.add(visitingNode);
+                queue.addAll(visitingNode.getNeighbors());
                 queue.removeAll(alreadyVisited);
             }
         }

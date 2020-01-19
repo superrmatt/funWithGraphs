@@ -3,7 +3,12 @@ import java.util.*;
 
 /**
  * Tree class of type <T>
- * Each instance has a value (often called vertex) and a List<Tree<T>> of children.
+ * Each instance has a value (often called vertex) and a List<Tree<T>> of children
+ * In graph theory, all trees are graphs, but not all graphs are trees.
+ * Each tree consists of a root node, which has 0 to many children. a Binary tree is defined as a tree with no more than two children.
+ * Binary trees are probably the easiest to understand and conceptualize.
+ * a binary search tree (BST) would be a tree that is sorted.
+ * More on Trees here: https://en.wikipedia.org/wiki/Tree_(data_structure)
  */
 public class Tree<T> {
 
@@ -73,7 +78,7 @@ public class Tree<T> {
 
         while(!queue.isEmpty()) {
              Tree<T> currentNode = queue.remove();
-            System.out.println("currentNode = " + currentNode.getValue());
+             LOGGER.info("Visited node with value: {}", currentNode.getValue());
 
             //if we found the node, return it. else add all its children to our queue
             if (currentNode.getValue().equals(value)) {

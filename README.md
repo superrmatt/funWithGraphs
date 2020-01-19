@@ -58,6 +58,15 @@
 Again, can't really represent these with letter type. Same examples as above, but with arrows denoting direction from the parent node, to the child node.
 
  #### Cycles
+ &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. In example 1 above, there exists one cycle.
+ - With the graph G = ((V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)})):
+>                 D  
+>                  \  
+>                 **A - B**
+>              **    \ /
+>                     C
+- There exists one cycle, which can be represented as the graph G=(V{A, B, C}, E{})
+
 
  #### Tree  
 

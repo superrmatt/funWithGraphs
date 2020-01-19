@@ -10,13 +10,17 @@
     - [Cycles](https://github.com/superrmatt/oddCycleDetector#cycles)
 3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree-1)
+        - [Driver.java]()
+        - [Tree.java]()
     - [Graph](https://github.com/superrmatt/oddCycleDetector#graph)
-// 4. [Components](https://github.com/superrmatt/oddCycleDetector#components)
-// 5. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
-6. [Coming Soon](https://github.com/superrmatt/oddCycleDetector#coming-soon)
-// 7. [Cycle Graphs](https://github.com/superrmatt/oddCycleDetector#cycle-graphs)
-8. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
-9. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
+        - [Driver.java]()
+        - [Node.java]()
+4. [Algorithms](https://github.com/superrmatt/oddCycleDetector#algorithms)
+    - [Graph]()
+    - [Tree]()
+5. [Further Work](https://github.com/superrmatt/oddCycleDetector#further-work)
+6. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
+7. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
 
 ## 
 
@@ -85,14 +89,14 @@ Again, can't really represent these with letter type. Same examples as above, bu
 
 
  #### Tree  
-&nbsp;&nbsp;&nbsp;&nbsp; Trees are a type of graph in which any two vertices are connected by exactly one edge. Trees, as a subset of graphs can get quite complicated in their formats. There exist many types of trees, there exist forests, there eist polytrees, and others. For now, I have only implemented code on a basic tree, and will only over the basic form of a tree. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; Trees are a type of graph in which any two vertices are connected by exactly one edge. Trees, as a subset of graphs can get quite complicated in their formats. There exist many types of trees, there exist forests, there exist polytrees, and others. For now, I have only implemented code on a basic tree, and will only over the basic form of a tree. <br/>
 A tree is an undirected graph G that satisfies any of the following equivalent conditions:
 - G is connected and acyclic (contains no cycles).
 - G is acyclic, and a simple cycle is formed if any edge is added to G.
 - G is connected, but would become disconnected if any single edge is removed from G.
 - G is connected and the 3-vertex complete graph K3 is not a minor of G.
-- Any two vertices in G can be connected by a unique simple path.
-Since trees are graphs, and graphs consist of nodes, trees also consist of nodes. Trees also have children, and are therefore directional graphs by design. A node in a tree has child node(s), and a parent node. A common form of a tree is a bianry tree, and more advanced, a bianry search tree (BST), more on those as I implement them. For now, all trees will be binary for simplicity sake, meaning each node cannot have more than two children, they will not necesarilly be BSTs though.
+- Any two vertices in G can be connected by a unique simple path.<br/><br/>
+Since trees are graphs, and graphs consist of nodes, trees also consist of nodes. Trees also have children, and are therefore directional graphs by design. A node in a tree has child node(s), and a parent node. A common form of a tree is a bianry tree, and more advanced, a binary search tree (BST), more on those as I implement them. For now, all trees will be binary for simplicity's sake, meaning each node cannot have more than two children, they will not necesarilly be BSTs though, if they are, it is pure accident!.
 - Let's say we have the set V{A, B, C}, and the set E{(A->B), (A->C)}
 - This constitutes graph G(V{A, B, C}, E{(A->B), (A->C)}).
 - G would look like this:
@@ -113,24 +117,30 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 
  #### Tree
   ##### TreeDriver.java
+   - Driver class for the tree structure. Builds a tree to according to the specified code and runs the requested algorithms.
 
   ##### Tree.java
+   - Tree.java is the class for each tree node. Each instance of the class Tree is a node, it holds a reference to its children and its value. There are accessors, contructors, and algorithms.
 
  #### Graph
   ##### GraphDriver.java
+   - Simply a driver class. Contains a main function. A graph's structure is only limited to the imagination, the lack of directed edges, and existing memory.
 
   ##### Node.java
+   - Node.java is the class for each node. A graph consists of at least two nodes. A Node holds a reference to its neighbors and its values. It contains accessor methods, constructors, and the algorithms.
 
-### Components
-- **Driver.java** builds a graph of user choosing. Driver.java can be edited to build a custom graph, then uses BreadthFirst.java to detect if the graph has any odd cycles.
-- **Node.java** consists of the class Node, which is what makes up each node of our graph. A node has its children (if any), its vertex, its childcount, and its State (see State.java). You can add a child, get a child, or get a vertex.
-- **Graph.java** consists of the class graph. A graph has its vertex count, and its vertices. You can add a Node or get a Node.
-- **State.java** is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class Node.
-- **BreadthFirst.java** is where we run our breadth first search (bfs). The bfs takes a parameter of type Node in its only function (bfs), and scans all child nodes. It is best to use the root node of the graph to find odd cycles, although, you could detect odd cycles within a subgraph of the graph, if you so desire. By that, I mean, one could easily use a non-root node. If the graph is cyclic, any Node will suffice.
+### Algorithms
+    **Coming Soon**
+    effiecency, method, algorithm, etc
+  #### Tree
+    Breadth First Search
+  #### Graph
+    Breadth First Search
 
-### Coming soon:
+### Further Work:
 - Depth First Search
 - BSTs
+- More work with trees
 - Remove node from graph
 - Remove node from Tree
 - Digraphs

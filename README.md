@@ -130,14 +130,19 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 
 ### Algorithms
 
-    Coming Soon
-    effiecency, complexity method, algorithm, etc
-
   #### Graph
-    Breadth First Search
+   - **Breadth First Search** 
+    - Time complexity of a BFS on a graph will visit each node a most once. However, with this implementation, the methods addAll() and removeAll() are used, which have linear time complexity themselves. Consider n the number of nodes, and c the number of edges. Therefore, in the worst case, if the node does not exist, addAll() and removeAll() are called up to the number of edges, this would result in O(c) time complexity. As long as c > n, time complexity will be O(c), else O(n). Another representation would be O(n = c), which denotes the larger of the two.
 
   #### Tree
-    Breadth First Search
+   - **Breadth First Search**
+    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). The ufndamental difference between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will always be n - 1.
+    - At execution start, the root node is added to a queue.
+    - while that queue is not empty,
+        - remove a node from the queue and store in temporary Tree instance.
+        - if the temporary matches the node we are searching for, return that node.
+        - else, add the all children of that node to the queue.
+    - if queue is empty (the node being searched for was never found): return, node not found.
 
 ### Further Work:
 - Depth First Search

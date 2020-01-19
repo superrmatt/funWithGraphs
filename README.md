@@ -1,4 +1,4 @@
-# Fun With Graphs
+# Fun With Graphs & Algorithms Galore
 ## Under Construction
 
 ## Table of Contents
@@ -148,10 +148,10 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 
   #### Tree
 - ##### Breadth First Search
-    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). The fundamental difference between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will always be n - 1.
+    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). One of the fundamental differences between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will always be n - 1.
         - With a set of traversable nodes Q:
         - While Q is not empty,
-            - Remove a node from the queue and store in temporary Tree instance.
+            - Remove a node from the queue and store reference in temporary Tree instance.
             - If the temporary matches the node we are searching for, return that node.
             - Else: add all children of that node to the queue.
         - Node never found, Q is empty: all nodes traversed.

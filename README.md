@@ -9,12 +9,12 @@
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree)
     - [Cycles](https://github.com/superrmatt/oddCycleDetector#cycles)
 3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
-    - [Tree](https://github.com/superrmatt/oddCycleDetector#tree-1)
-        - [TreeDriver.java](https://github.com/superrmatt/funWithGraphs#treedriverjava)
-        - [Tree.java](https://github.com/superrmatt/funWithGraphs#treejava)
     - [Graph](https://github.com/superrmatt/oddCycleDetector#graph)
         - [GraphDriver.java](https://github.com/superrmatt/funWithGraphs#graphdriverjava)
         - [Node.java](https://github.com/superrmatt/funWithGraphs#nodedriverjava)
+    - [Tree](https://github.com/superrmatt/oddCycleDetector#tree-1)
+        - [TreeDriver.java](https://github.com/superrmatt/funWithGraphs#treedriverjava)
+        - [Tree.java](https://github.com/superrmatt/funWithGraphs#treejava)
 4. [Algorithms](https://github.com/superrmatt/oddCycleDetector#algorithms)
     - [Graph](https://github.com/superrmatt/funWithGraphs#graph-1)
     - [Tree](https://github.com/superrmatt/funWithGraphs#tree-2)
@@ -114,13 +114,6 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 
 ### Source Folders
 
- #### Tree
-  ##### TreeDriver.java
-   - Driver class for the tree structure. Builds a tree to according to the specified code and runs the requested algorithms.
-
-  ##### Tree.java
-   - Tree.java is the class for each tree node. Each instance of the class Tree is a node, it holds a reference to its children and its value. There are accessors, contructors, and algorithms.
-
  #### Graph
   ##### GraphDriver.java
    - Simply a driver class. Contains a main function. A graph's structure is only limited to the imagination, the lack of directed edges, and existing memory.
@@ -128,13 +121,22 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
   ##### Node.java
    - Node.java is the class for each node. A graph consists of at least two nodes. A Node holds a reference to its neighbors and its values. It contains accessor methods, constructors, and the algorithms.
 
+ #### Tree
+  ##### TreeDriver.java
+   - Driver class for the tree structure. Builds a tree to according to the specified code and runs the requested algorithms.
+
+  ##### Tree.java
+   - Tree.java is the class for each tree node. Each instance of the class Tree is a node, it holds a reference to its children and its value. There are accessors, contructors, and algorithms.
+
 ### Algorithms
 
     **Coming Soon**
     effiecency, method, algorithm, etc
-  #### Tree
-    Breadth First Search
+
   #### Graph
+    Breadth First Search
+
+  #### Tree
     Breadth First Search
 
 ### Further Work:

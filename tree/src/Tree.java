@@ -72,22 +72,23 @@ public class Tree<T> {
      * @return the found node or empty() if node not found.
      */
     public static <T> Optional<Tree<T>> breadthFirstSearch( T value,  Tree<T> root) {
-        //use a queue to traverse the nodes
-         Queue<Tree<T>> queue = new ArrayDeque<>();
+        //Use a queue to traverse the nodes. Add root node to queue.
+        Queue<Tree<T>> queue = new ArrayDeque<>();
         queue.add(root);
 
+        //While queue isn't empty, pop a Node from the queue.
         while(!queue.isEmpty()) {
              Tree<T> currentNode = queue.remove();
-             LOGGER.info("Visited node with value: {}", currentNode.getValue());
+             System.out.println("currentNode = " +currentNode.getValue());
 
-            //if we found the node, return it. else add all its children to our queue
+            //If we found the node, return it. Else add all its children to our queue.
             if (currentNode.getValue().equals(value)) {
                 return Optional.of(currentNode);
             } else {
                 queue.addAll(currentNode.getChildren());
             }
         }
-        // if queue is empty, not found.
+        //If queue is empty, node not found.
         return Optional.empty();
     }
 }

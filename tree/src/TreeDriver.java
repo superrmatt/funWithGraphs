@@ -1,7 +1,7 @@
 /**
- * Driver Class. used to run program and use to have fun with Trees & graphs
+ * Driver Class. Used to run program and use to have fun with Trees & graphs
  */
-public class Driver{
+public class TreeDriver{
     
     /**
      * main
@@ -9,7 +9,8 @@ public class Driver{
      */
     public static void main(String[] args){
 
-        /**create our sample tree via Tree<T> class, <T> is <Integer>
+        /**
+         * create our sample tree via Tree<T> class, <T> is <Integer>
          * looks like:
          *         10
          *        /  \

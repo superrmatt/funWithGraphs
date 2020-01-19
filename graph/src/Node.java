@@ -1,4 +1,6 @@
 
+import java.util.*;
+
 /**
  * Class Node<T>
  * A node is an indivisible unit of a graph. Nodes make up graphs.
@@ -19,6 +21,7 @@ public class Node<T> {
 
     /**
      * Set<Node<T>> of this Node's neighbors.
+     * Edges dictate no direction, therefore if Node A has neighbors B & C, that means Nodes B & C will also list A as a neighbor. There is no parent->child relationship in undirected graphs.
      */
     private Set<Node<T>> neighbors;
  
@@ -48,12 +51,33 @@ public class Node<T> {
     }
 
     /**
-     * Similiar to the BFS algorithm for trees, this method must account for the possibility of cycles. Else method will run endlessly.
+     * Acessor for value.
+     * @return T value of this node.
+     */
+    public T getValue(){
+        return this.value;
+    }
+
+    /**
+     * Accessor for neighbors.
+     * @return Set<Node<T>> neighbors of this node.
+     */
+    public Set<Node<T>> getNeighbors(){
+        return this.neighbors;
+    }
+
+    /**
+     * Similiar to the BFS algorithm for trees, this method must account for the possibility of cycles. 
+     * Else method will run endlessly if there exists a cycle.
      * @param value the vertex value of type T to search for.
      * @param start the start node to begin the search.
      * @return the found node, or empty if node does not exist.
      */
     public static <T> Optional<Node<T>> breadthFirstSearch(T value, Node<T> start) {
+        //Set of visited nodes.
+        Set<Node<T>> alreadyVisited = new HashSet<>();
+
+        //Queue of traversable nodes.
         Queue<Node<T>> queue = new ArrayDeque<>();
         queue.add(start);
      
@@ -61,8 +85,9 @@ public class Node<T> {
      
         while (!queue.isEmpty()) {
             currentNode = queue.remove();
-            LOGGER.info("Visited node with value: {}", currentNode.getValue());
+            System.out.println("currentNode = " +currentNode.getValue());
          
+            //If we found node in question, return it. Else, add this Node to alreadyVisited, add all neighbors to queue, and remove this node from queue.
             if (currentNode.getValue().equals(value)) {
                 return Optional.of(currentNode);
             } else {

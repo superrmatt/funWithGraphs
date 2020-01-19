@@ -28,7 +28,7 @@
  &nbsp;&nbsp;&nbsp;&nbsp;  Often simply referred to as graph, a unigraph is a graph whose edges have no direction. A graph is an ordered pair where G = (V,E). V is a set of vertices, and E is a set of edges connecting those vertices. An edge is associated with two distinct vertices.
  - Let's say we have the set V{A, B, C, D},
  - And the set E{(A,B), (B,C), (A,C) (A,D)}. 
- - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}).
+ - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C), (A,D)}).
  - Which could be represented as:
 >                 D  
 >                  \  
@@ -37,7 +37,7 @@
 >                     C
 - Let's now add the set V{E, F, G}.
 - And the set E{(D,E), (B,F), (E,F), (A,F)}.
-- Therefore, our graph is now: G = (V{A, B, C, D, E, F, G}, E{(A,B), (B,C), (A,C) (A,D), (D,E), (B,F), (E,F), (A,F)})
+- Therefore, our graph is now: G = (V{A, B, C, D, E, F, G}, E{(A,B), (B,C), (A,C), (A,D), (D,E), (B,F), (E,F), (A,F)})
 - Which can be represented as:
 >                   E 
 >                  / \
@@ -58,14 +58,30 @@
 Again, can't really represent these with letter type. Same examples as above, but with arrows denoting direction from the parent node, to the child node.
 
  #### Cycles
- &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. In example 1 above, there exists one cycle.
+ &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. For the following examples, direction, or lackthereof does not matter, but we will assume all graphs are unigraphs. 
+ - In example one above, there exists one cycle.
  - With the graph G = ((V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)})):
 >                 D  
 >                  \  
->                 **A - B**
->              **    \ /
+>                   A - B
+>                    \ /
 >                     C
-- There exists one cycle, which can be represented as the graph G=(V{A, B, C}, E{})
+- There exists one cycle, which can be represented as the graph G = (V{A, B, C}, E{(A,B), (B,C), (A,C)})
+>                   A - B
+>                    \ /
+>                     C
+- In example two, there exist many cycles, to illustrate a few unique cycles:
+    1. G = (V{A, D, E, F}, E{(A,D), (D,E), (E,F), (A,F)}).
+    2. G = (V{A, B, C, F}, E{(A,B), (B,C), (A,C), (B,F)}).
+    3. G = (V{A, B, C, D, E, F}, E{(B,C), (A,C), (A,D), (D,E), (B,F), (E,F)}).
+- These can all be represented as follows:
+>                   E 
+>                  / \
+>                 D   F
+>                  \ / \
+>                   A - B
+>                    \ /
+>                     C
 
 
  #### Tree  

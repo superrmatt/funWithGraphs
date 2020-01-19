@@ -3,19 +3,33 @@
 
 ## Table of Contents
 1. [Introduction](https://github.com/superrmatt/oddCycleDetector#introduction)
-2. [Components](https://github.com/superrmatt/oddCycleDetector#components)
-3. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
-4. [Coming Soon](https://github.com/superrmatt/oddCycleDetector#coming-soon)
-5. [Cycle Graphs](https://github.com/superrmatt/oddCycleDetector#cycle-graphs)
-6. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
-7. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
+2. [Theory](https://github.com/superrmatt/oddCycleDetector#theory)
+    -[Unigraph](https://github.com/superrmatt/oddCycleDetector#unigraph)
+    -[Digraph](https://github.com/superrmatt/oddCycleDetector#digraph)
+    -[Tree]()
+3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
+    -[Tree](https://github.com/superrmatt/oddCycleDetector#tree)
+    -[Graph](https://github.com/superrmatt/oddCycleDetector#graph)
+4. [Components](https://github.com/superrmatt/oddCycleDetector#components)
+5. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
+6. [Coming Soon](https://github.com/superrmatt/oddCycleDetector#coming-soon)
+7. [Cycle Graphs](https://github.com/superrmatt/oddCycleDetector#cycle-graphs)
+8. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
+9. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
 
 ## 
 
 ### Introduction
-&nbsp;&nbsp;&nbsp;&nbsp;Java program which builds a graph, and detects if there exists an odd cycle.
-A graph does not contain a cycle of odd length if and only if it is bipartite.
-If a graph has an odd length cycle, then it cannot be bipartite. In bipartite graphs, there exist two sets of vertices, such that no vertex in a set is connected with any other vertex of the same set. In lehman's terms, this simply means that a graph with an odd number of edges, or children, is not bipartite, or cannot be traveresed, and therefore, has at least one odd cycle.
+&nbsp;&nbsp;&nbsp;&nbsp;This a collection of Java classes, which deal in an implementation of graphs, and their algorithms. This is something that will be continually expanded upon, and therefore, is always a work in progress, until this statement is no longer here :). Graph theory is the study of graphs. Graphs are mathematical models used to represent the relations between two paired things. A graph is made up of vertices, and edges. A vertex is defined as the value in a node in the graph (see below for examples of the artistic representation of a graph). An edge is the connection between two nodes. Mathematically, a graph is represented as G = (V, E), where G is the graph, V is the set of vertices (or nodes), and E is the set of edges (or connections). There are two major types of graphs, a directed graph (digraph) and an undirected graph (unigraph). A unigraph has edges that have no direction. Meaning, an edge links two vertices equally or symetrically. A digraph has edges that link two nodes asymetrically. Meaning, one node "flows" into the other, this is often referred to as a parent->child relationship. A major form of digraph is the Tree (again, representations below). A tree is a form of graph that has a root and is nonlinear. It simulates a heirarchal tree structure, only upside down. Where the trunk or roots (root node) is at the top, and cascading downward are the branches. This of course is just a visual reprsentation, to make them simpler to conceptualize, there exists no directional orientation for a tree, other than the parent->child relationship between nodes.
+
+### Theory
+
+
+### Source Folders
+
+#### Tree
+
+#### Graph
 
 ### Components
 - **Driver.java** builds a graph of user choosing. Driver.java can be edited to build a custom graph, then uses BreadthFirst.java to detect if the graph has any odd cycles.
@@ -87,6 +101,7 @@ FYI: Wikipedia is a great source of information, but I cannot stress enough the 
 14. Bidirectional Graph: https://en.wikipedia.org/wiki/Bidirected_graph
 15. Undirected Graph: https://mathinsight.org/definition/undirected_graph
 16. Directed Graph: https://en.wikipedia.org/wiki/Directed_graph
+17. Glossary of Graph Theory (Definitions & Terms): https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms
 
 ### Sources:
 Taught me everything I know about Data structures & algorithms, their design & their analysis.

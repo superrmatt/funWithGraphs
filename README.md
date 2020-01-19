@@ -130,8 +130,8 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 
 ### Algorithms
 
-    **Coming Soon**
-    effiecency, method, algorithm, etc
+    Coming Soon
+    effiecency, complexity method, algorithm, etc
 
   #### Graph
     Breadth First Search

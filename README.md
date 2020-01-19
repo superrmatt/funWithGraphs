@@ -175,4 +175,4 @@ Taught me everything I know about Data structures & algorithms, their design & t
 - Dr. Delbert Hart, Associate Professor of computer science at SUNY College at Plattsburgh.
 - Dr. Hung Ngo, Associate Professor of computer science at University at Buffalo.
 - Dr. Carl Alphonce, Associate Professor of computer science at University at Buffalo.
-- The vastness, boundless, and endlessness vaults of the interwebs, including but not limited to the above links.
+- The vastness, boundless, and endless vaults of the interwebs, including but not limited to the above links.

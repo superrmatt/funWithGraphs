@@ -11,17 +11,17 @@
 3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree-1)
     - [Graph](https://github.com/superrmatt/oddCycleDetector#graph)
-4. [Components](https://github.com/superrmatt/oddCycleDetector#components)
-5. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
+// 4. [Components](https://github.com/superrmatt/oddCycleDetector#components)
+// 5. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
 6. [Coming Soon](https://github.com/superrmatt/oddCycleDetector#coming-soon)
-7. [Cycle Graphs](https://github.com/superrmatt/oddCycleDetector#cycle-graphs)
+// 7. [Cycle Graphs](https://github.com/superrmatt/oddCycleDetector#cycle-graphs)
 8. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
 9. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
 
 ## 
 
 ### Introduction
-&nbsp;&nbsp;&nbsp;&nbsp;This a collection of Java classes, which deal in an implementation of graphs, and their algorithms. This is something that will be continually expanded upon, and therefore, is always a work in progress, until this statement is no longer here :). Graph theory is the study of graphs. Graphs are mathematical models used to represent the relations between two paired things. A graph is made up of vertices, and edges. A vertex is defined as the value in a node in the graph (see below for examples of the artistic representation of a graph). An edge is the connection between two nodes. Mathematically, a graph is represented as G = (V, E), where G is the graph, V is the set of vertices (or nodes), and E is the set of edges (or connections). There are two major types of graphs, a directed graph (digraph) and an undirected graph (unigraph). A unigraph has edges that have no direction. Meaning, an edge links two vertices equally or symetrically. A digraph has edges that link two nodes asymetrically. Meaning, one node "flows" into the other, this is often referred to as a parent->child relationship. A major form of digraph is the Tree (again, representations below). A tree is a form of graph that has a root and is nonlinear. It simulates a heirarchal tree structure, only upside down. Where the trunk or roots (root node) is at the top, and cascading downward are the branches. This of course is just a visual reprsentation, to make them simpler to conceptualize, there exists no directional orientation for a tree, other than the parent->child relationship between nodes.
+&nbsp;&nbsp;&nbsp;&nbsp;This a collection of Java classes, which deal in an implementation of graphs, and their algorithms. This proejct is meant to be the journey of my study of graphs, their theory, their applications and everything in between. Maybe someone will learn from it, or maybe not. This is something that will be continually expanded upon, and therefore, is always a work in progress, until this statement is no longer here :). Graph theory is the study of graphs. Graphs are mathematical models used to represent the relations between two paired things. A graph is made up of vertices, and edges. A vertex is defined as the value in a node in the graph (see below for examples of the artistic representation of a graph). An edge is the connection between two nodes. Mathematically, a graph is represented as G = (V, E), where G is the graph, V is the set of vertices (or nodes), and E is the set of edges (or connections). There are two major types of graphs, a directed graph (digraph) and an undirected graph (unigraph). A unigraph has edges that have no direction. Meaning, an edge links two vertices equally or symetrically. A digraph has edges that link two nodes asymetrically. Meaning, one node "flows" into the other, this is often referred to as a parent->child relationship. A major form of digraph is the Tree (again, representations below). A tree is a form of graph that has a root and is nonlinear. It simulates a heirarchal tree structure, only upside down. Where the trunk or roots (root node) is at the top, and cascading downward are the branches. This of course is just a visual reprsentation, to make them simpler to conceptualize, there exists no directional orientation for a tree, other than the parent->child relationship between nodes.
 
 ### Theory
  #### Unigraph
@@ -85,13 +85,41 @@ Again, can't really represent these with letter type. Same examples as above, bu
 
 
  #### Tree  
-
+&nbsp;&nbsp;&nbsp;&nbsp; Trees are a type of graph in which any two vertices are connected by exactly one edge. Trees, as a subset of graphs can get quite complicated in their formats. There exist many types of trees, there exist forests, there eist polytrees, and others. For now, I have only implemented code on a basic tree, and will only over the basic form of a tree. <br/>
+A tree is an undirected graph G that satisfies any of the following equivalent conditions:
+- G is connected and acyclic (contains no cycles).
+- G is acyclic, and a simple cycle is formed if any edge is added to G.
+- G is connected, but would become disconnected if any single edge is removed from G.
+- G is connected and the 3-vertex complete graph K3 is not a minor of G.
+- Any two vertices in G can be connected by a unique simple path.
+Since trees are graphs, and graphs consist of nodes, trees also consist of nodes. Trees also have children, and are therefore directional graphs by design. A node in a tree has child node(s), and a parent node. A common form of a tree is a bianry tree, and more advanced, a bianry search tree (BST), more on those as I implement them. For now, all trees will be binary for simplicity sake, meaning each node cannot have more than two children, they will not necesarilly be BSTs though.
+- Let's say we have the set V{A, B, C}, and the set E{(A->B), (A->C)}
+- This constitutes graph G(V{A, B, C}, E{(A->B), (A->C)}).
+- G would look like this:
+>                         A 
+>                        / \ 
+>                       B   C
+- Now, add the nodes D, E, F to set V. V{A, B, C, D, E, F}.
+- And the edges (B->D), (B->E), (C->F).
+- So, G = (V{A, B, C, D, E, F}, E{(A->B), (A->C), (B->D), (B->E), (C->F)})
+- G would look like this:
+>                         A 
+>                        / \ 
+>                       B   C
+>                      / \   \
+>                     D   E   F
 
 ### Source Folders
 
  #### Tree
+  ##### TreeDriver.java
+
+  ##### Tree.java
 
  #### Graph
+  ##### GraphDriver.java
+
+  ##### Node.java
 
 ### Components
 - **Driver.java** builds a graph of user choosing. Driver.java can be edited to build a custom graph, then uses BreadthFirst.java to detect if the graph has any odd cycles.
@@ -100,49 +128,13 @@ Again, can't really represent these with letter type. Same examples as above, bu
 - **State.java** is just an enum used by Node, BreadthFirst uses it to track which Nodes have been visited to detect for odd cycles. Each Node has its state, as a public global variable in the class Node.
 - **BreadthFirst.java** is where we run our breadth first search (bfs). The bfs takes a parameter of type Node in its only function (bfs), and scans all child nodes. It is best to use the root node of the graph to find odd cycles, although, you could detect odd cycles within a subgraph of the graph, if you so desire. By that, I mean, one could easily use a non-root node. If the graph is cyclic, any Node will suffice.
 
-### More on Node.java & Graph.java
-- A Node is the smallest, indivisable unit of a graph.
-- A node has its vertex (value) and its children, if any.
-- So, say we have Node A, with two children, B and C. This constitutes graph W. Our graph W would look something like this: <br/>
->                         A 
->                        / \ 
->                       B   C
-- Therefore, Node A, has two children, in my implemention of a Node, that would be represented as an array of Nodes: [B,C]. What if children of Node A looks like this: [B,C,D]? THis would constitute graph X </br>
->                       D 
->                        \ 
->                         A 
->                        / \ 
->                       B   C
-- Now, let's say Node B also has two children [E,F], making graph Y. <br/>
->                       D 
->                        \ 
->                         A 
->                        / \ 
->                       B   C
->                      / \
->                     E   F
-- Lastly, we can also establish that B also has a child in C. So, the children of B are [C,E,F], making graph Z: <br/>
->                       D 
->                        \ 
->                         A 
->                        / \ 
->                       B − C
->                      / \
->                     E   F
-- All of the above are represented as graphs. And much like the children, they can be represented as an array of Nodes, which is what I did in this implementation of a graph. The first dimension array represents the Node and the 2nd dimension array is each Nodes array of children. [A[B,C,D],B[C,E,F],C[],D[]]
-- The final point to make here is, which graph has an odd cycle. None, because none of those examples are even cycle graphs to begin with. Those will be explained and explored in the next section.
-
-### Cycle Graphs
-**Coming Soon**
-
-
-
-
 ### Coming soon:
-- Depth First Search to find odd cycles.
+- Depth First Search
+- BSTs
 - Remove node from graph
-- Remove children from Node (might get funky, probably best accomplished in graph class, or at least with help from graph class).
-- Other operations on graphs, graphs are cool, at which point I will change the name of this repo to better align with that. "graphsAreFun" perhaps.
+- Remove node from Tree
+- Digraphs
+- With graphs, the possiblities are near endless.
 
 ### Supplemental Reading:
 FYI: Wikipedia is a great source of information, but I cannot stress enough the importance of using other sources for information due to wikipedias ease of editing.
@@ -172,4 +164,4 @@ Taught me everything I know about Data structures & algorithms, their design & t
 - Dr. Delbert Hart, Associate Professor of computer science at SUNY College at Plattsburgh.
 - Dr. Hung Ngo, Associate Professor of computer science at University at Buffalo.
 - Dr. Carl Alphonce, Associate Professor of computer science at University at Buffalo.
-- The vastness, boundless, and endlessness vaults of the interwebs.
+- The vastness, boundless, and endlessness vaults of the interwebs, including but not limited to the above links.

@@ -6,9 +6,9 @@
 2. [Theory](https://github.com/superrmatt/oddCycleDetector#theory)
     - [Unigraph](https://github.com/superrmatt/oddCycleDetector#unigraph)
     - [Digraph](https://github.com/superrmatt/oddCycleDetector#digraph)
-    - [Tree]()
-3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree)
+3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
+    - [Tree](https://github.com/superrmatt/oddCycleDetector#tree-1)
     - [Graph](https://github.com/superrmatt/oddCycleDetector#graph)
 4. [Components](https://github.com/superrmatt/oddCycleDetector#components)
 5. [More on Node.java & Graph.java](https://github.com/superrmatt/oddCycleDetector#more-on-nodejava--graphjava)
@@ -24,6 +24,29 @@
 
 ### Theory
  #### Unigraph
+ &nbsp;&nbsp;&nbsp;&nbsp;  Often simply referred to as graph, a unigraph is a graph whose edges have no direction. A graph is an ordered pair where G = (V,E). V is a set of vertices, and E is a set of edges connecting those vertices. An edge is associated with two distinct vertices.
+ - Let's say we have the set V{A, B, C, D},
+ - And the set E{(A,B), (B,C), (A,C) (A,D)}. 
+ - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}).
+ - Which could be represented as:
+>                 D  
+>                  \  
+>                   A - B
+>                    \ /
+>                     C
+- Let's now add the set V{E, F, G}.
+- And the set E{(D,E), (B,F), (E,F), (A,F)}.
+- Therefore, our graph is now: G = (V{A, B, C, D, E, F, G}, E{(A,B), (B,C), (A,C) (A,D), (D,E), (B,F), (E,F), (A,F)})
+- Which can be represented as:
+>                   E 
+>                  / \
+>                 D   F
+>                  \ / \
+>                   A - B
+>                    \ /
+>                     C
+
+
 
  #### Digraph
 

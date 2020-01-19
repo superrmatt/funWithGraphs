@@ -75,13 +75,13 @@ Again, can't really represent these with letter type. Same examples as above, bu
     2. G = (V{A, B, C, F}, E{(A,B), (B,C), (A,C), (B,F)}).
     3. G = (V{A, B, C, D, E, F}, E{(B,C), (A,C), (A,D), (D,E), (B,F), (E,F)}).
 - These can all be represented as follows:
->                   E 
->                  / \
->                 D   F
->                  \ / \
->                   A - B
->                    \ /
->                     C
+>            i.     E       ii.     F       iii.     E
+>                  / \             / \              / \
+>                 D   F           A   B            D   F
+>                  \ /             \ /              \   \
+>                   A               C                A   B
+>                                                     \ / 
+>                                                      C
 
 
  #### Tree  

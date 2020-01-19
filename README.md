@@ -54,7 +54,7 @@
  - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}). <br/>
  - Now, add the set V{E, F, G}.
  - And the set E{(D->E), (B->F), (E->F), (A->F)}.
- - Therefore, our graph is now: G = (V{A, B, C, D, E, F, G}, E{(A->B), (B->C), (A->C) (A->D), (D->E), (B->F), (E->F), (A->F)})
+ - Therefore, our graph is now: G = (V{A, B, C, D, E, F, G}, E{(A->B), (B->C), (A->C) (A->D), (D->E), (B->F), (E->F), (A->F)})<br/>
 Again, can't really represent these with letter type. Same examples as above, but with arrows denoting direction from the parent node, to the child node.
 
  #### Cycles

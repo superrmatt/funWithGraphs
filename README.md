@@ -17,7 +17,9 @@
         - [Tree.java](https://github.com/superrmatt/funWithGraphs#treejava)
 4. [Algorithms](https://github.com/superrmatt/oddCycleDetector#algorithms)
     - [Graph](https://github.com/superrmatt/funWithGraphs#graph-1)
+        - [Breadth First Search](https://github.com/superrmatt/funWithGraphs#breadth-first-search)
     - [Tree](https://github.com/superrmatt/funWithGraphs#tree-2)
+        - [Breadth First Search](https://github.com/superrmatt/funWithGraphs#breadth-first-search-1)
 5. [Further Work](https://github.com/superrmatt/oddCycleDetector#further-work)
 6. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
 7. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
@@ -25,7 +27,7 @@
 ## 
 
 ### Introduction
-&nbsp;&nbsp;&nbsp;&nbsp;This a collection of Java classes, which deal in an implementation of graphs, and their algorithms. This proejct is meant to be the journey of my study of graphs, their theory, their applications, and everything in between. This is something that will be continually expanded upon, and therefore, is always a work in progress. Graph theory is the study of graphs. Graphs are mathematical models used to represent the relations between two paired things. A graph is made up of vertices, and edges. A vertex is defined as the value in a node in the graph (see below for examples of the artistic representation of a graph). An edge is the connection between two nodes. Mathematically, a graph is represented as G = (V, E), where G is the graph, V is the set of vertices (or nodes), and E is the set of edges (or connections). There are two major types of graphs, undirected graphs (unigraphs) and a directed graphs (digraphs). A unigraph has edges that have no direction. Meaning, an edge links two vertices equally or symetrically. A digraph has edges that link two nodes asymetrically. Meaning, one node "flows" into the other, this is often referred to as a parent->child relationship. A major form of digraph is the Tree (again, representations below). A tree is a form of graph that has a root and is nonlinear. It simulates a heirarchal tree structure, only upside down. Where the trunk or roots (root node) is at the top, and cascading downward are the branches. This of course is just a visual reprsentation, to make them simpler to conceptualize, there exists no directional orientation for a tree, other than the parent->child relationship between nodes.
+&nbsp;&nbsp;&nbsp;&nbsp;This a collection of Java classes, which deal in an implementation of graphs, and their algorithms. This proejct is meant to be the journey of my study of graphs, their theory, their applications, and everything in between. This is something that will be continually expanded upon, and therefore, is always a work in progress. Graph theory is the study of graphs. Graphs are mathematical models used to represent the relations between two paired things. A graph is made up of vertices, and edges. A vertex is defined as the value in a node in the graph (see below for examples of the artistic representation of a graph). An edge is the connection between two nodes. Mathematically, a graph is represented as G = (V, E), where G is the graph, V is the set of vertices (or nodes), and E is the set of edges (or connections). There are two major types of graphs, undirected graphs (unigraphs) and directed graphs (digraphs). A unigraph has edges that have no direction. Meaning, an edge links two vertices equally or symetrically. A digraph has edges that link two nodes asymetrically. Meaning, one node "flows" into the other, this is often referred to as a parent->child relationship. A major form of digraph is the Tree (again, representations below). A tree is a form of graph that has a root and is nonlinear. It simulates a heirarchal tree structure, only upside down. Where the trunk or roots (root node) is at the top, and cascading downward are the branches. This of course is just a visual reprsentation, to make them simpler to conceptualize, there exists no directional orientation for a tree, other than the parent->child relationship between nodes.
 
 ### Theory
  #### Unigraph
@@ -52,7 +54,7 @@
 >                     C
 
  #### Digraph
- &nbsp;&nbsp;&nbsp;&nbsp; Much like a unigraph, a digraph has edges with direction. Meaning they can only be traversed in one direction. Or, more simply, that one node points to another node, a one way street. Another way of saying this would be that a digraph has edges with orientation. Yet another way, is the one often referred to in practice with programming, a parent->child relationship. The parent->child relationship is the one I will use from this point on. These are much harder to build with a keyboard, we lack the characters. Instead, I will denote an arrow in the set of edges. The examples are the same as above, so should be straightforward.
+ &nbsp;&nbsp;&nbsp;&nbsp; Much like a unigraph, except a digraph has edges with direction. Meaning they can only be traversed in one direction. Or, more simply, that one node points to another node, a one way street. Another way of saying this would be that a digraph has edges with orientation. Yet another way, is the one often referred to in practice with programming, a parent->child relationship. The parent->child relationship is the one I will use from this point on. These are much harder to build with a keyboard, we lack the characters. Instead, I will denote an arrow in the set of edges. The examples are the same as above, so should be straightforward.
  - Let's say we have the set V{A, B, C, D},
  - And the set E{(A->B), (B->C), (A->C) (A->D)}. In this case, direction matters. (A->B != A<-B).
  - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}). <br/>
@@ -63,7 +65,7 @@ Again, can't really represent these with letter type. Same examples as above, bu
 
  #### Cycles
  &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. For the following examples, direction, or lackthereof does not matter, but we will assume all of the following examples are unigraphs. 
- - In the first above, with the graph G = ((V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)})):
+ - In the first above, with the graph G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}s):
 >                 D  
 >                  \  
 >                   A - B
@@ -131,8 +133,8 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 ### Algorithms
 
 #### Graph
-- **Breadth First Search** 
-    - Time complexity of a BFS on a graph will visit each node a most once. However, with this implementation, the methods addAll() and removeAll() are used, which have linear time complexity themselves. Consider n the number of nodes, and c the number of edges. Therefore, in the worst case, if the node does not exist, addAll() and removeAll() are called up to the number of edges, this would result in O(c) time complexity. As long as c > n, time complexity will be O(c), else O(n). Another representation would be O(n = c), which denotes the larger of the two.
+- ##### Breadth First Search 
+    - Time complexity of a BFS on a graph will visit each node a most once. However, with this implementation, the methods addAll() and removeAll() are used, which have linear time complexity themselves. Consider n the number of nodes, and c the number of edges. Therefore, in the worst case, if the node does not exist, addAll() and removeAll() are called up to the number of edges, this would result in O(c) time complexity. As long as c > n, time complexity will be O(c), else O(n). Another representation would be O(n + c), which denotes the larger of the two.
         - With a set of traversable nodes Q and visited nodes T:
         - add root node to Q
             - While Q is not empty,
@@ -145,8 +147,8 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
             - Node never found, Q is empty: all nodes traversed.
 
   #### Tree
-- **Breadth First Search**
-    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). The ufndamental difference between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will always be n - 1.
+- ##### Breadth First Search
+    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). The fundamental difference between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will always be n - 1.
         - With a set of traversable nodes Q:
         - While Q is not empty,
             - Remove a node from the queue and store in temporary Tree instance.

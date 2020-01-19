@@ -25,11 +25,11 @@
 ## 
 
 ### Introduction
-&nbsp;&nbsp;&nbsp;&nbsp;This a collection of Java classes, which deal in an implementation of graphs, and their algorithms. This proejct is meant to be the journey of my study of graphs, their theory, their applications and everything in between. Maybe someone will learn from it, or maybe not. This is something that will be continually expanded upon, and therefore, is always a work in progress, until this statement is no longer here :). Graph theory is the study of graphs. Graphs are mathematical models used to represent the relations between two paired things. A graph is made up of vertices, and edges. A vertex is defined as the value in a node in the graph (see below for examples of the artistic representation of a graph). An edge is the connection between two nodes. Mathematically, a graph is represented as G = (V, E), where G is the graph, V is the set of vertices (or nodes), and E is the set of edges (or connections). There are two major types of graphs, a directed graph (digraph) and an undirected graph (unigraph). A unigraph has edges that have no direction. Meaning, an edge links two vertices equally or symetrically. A digraph has edges that link two nodes asymetrically. Meaning, one node "flows" into the other, this is often referred to as a parent->child relationship. A major form of digraph is the Tree (again, representations below). A tree is a form of graph that has a root and is nonlinear. It simulates a heirarchal tree structure, only upside down. Where the trunk or roots (root node) is at the top, and cascading downward are the branches. This of course is just a visual reprsentation, to make them simpler to conceptualize, there exists no directional orientation for a tree, other than the parent->child relationship between nodes.
+&nbsp;&nbsp;&nbsp;&nbsp;This a collection of Java classes, which deal in an implementation of graphs, and their algorithms. This proejct is meant to be the journey of my study of graphs, their theory, their applications, and everything in between. This is something that will be continually expanded upon, and therefore, is always a work in progress. Graph theory is the study of graphs. Graphs are mathematical models used to represent the relations between two paired things. A graph is made up of vertices, and edges. A vertex is defined as the value in a node in the graph (see below for examples of the artistic representation of a graph). An edge is the connection between two nodes. Mathematically, a graph is represented as G = (V, E), where G is the graph, V is the set of vertices (or nodes), and E is the set of edges (or connections). There are two major types of graphs, undirected graphs (unigraphs) and a directed graphs (digraphs). A unigraph has edges that have no direction. Meaning, an edge links two vertices equally or symetrically. A digraph has edges that link two nodes asymetrically. Meaning, one node "flows" into the other, this is often referred to as a parent->child relationship. A major form of digraph is the Tree (again, representations below). A tree is a form of graph that has a root and is nonlinear. It simulates a heirarchal tree structure, only upside down. Where the trunk or roots (root node) is at the top, and cascading downward are the branches. This of course is just a visual reprsentation, to make them simpler to conceptualize, there exists no directional orientation for a tree, other than the parent->child relationship between nodes.
 
 ### Theory
  #### Unigraph
- &nbsp;&nbsp;&nbsp;&nbsp;  Often simply referred to as graph, a unigraph is a graph whose edges have no direction. A graph is an ordered pair where G = (V,E). V is a set of vertices, and E is a set of edges connecting those vertices. An edge is associated with two distinct vertices.
+ &nbsp;&nbsp;&nbsp;&nbsp;  Often simply referred to as a graph, a unigraph is a graph whose edges have no direction. A graph is an ordered pair where G = (V,E). V is a set of vertices, and E is a set of edges connecting those vertices. An edge is associated with two distinct vertices.
  - Let's say we have the set V{A, B, C, D},
  - And the set E{(A,B), (B,C), (A,C) (A,D)}. 
  - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C), (A,D)}).
@@ -62,9 +62,8 @@
 Again, can't really represent these with letter type. Same examples as above, but with arrows denoting direction from the parent node, to the child node.
 
  #### Cycles
- &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. For the following examples, direction, or lackthereof does not matter, but we will assume all graphs are unigraphs. 
- - In example one above, there exists one cycle.
- - With the graph G = ((V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)})):
+ &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. For the following examples, direction, or lackthereof does not matter, but we will assume all of the following examples are unigraphs. 
+ - In the first above, with the graph G = ((V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)})):
 >                 D  
 >                  \  
 >                   A - B
@@ -89,14 +88,14 @@ Again, can't really represent these with letter type. Same examples as above, bu
 
 
  #### Tree  
-&nbsp;&nbsp;&nbsp;&nbsp; Trees are a type of graph in which any two vertices are connected by exactly one edge. Trees, as a subset of graphs can get quite complicated in their formats. There exist many types of trees, there exist forests, there exist polytrees, and others. For now, I have only implemented code on a basic tree, and will only over the basic form of a tree. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; Trees are a type of graph in which any two vertices are connected by exactly one edge. Trees, as a subset of graphs can get quite complicated in their formats. There exist many types of trees, there exist forests, there exist polytrees, and others. For now, I have only implemented code on a basic tree, and will only cover the basic form of a tree. <br/>
 A tree is an undirected graph G that satisfies any of the following equivalent conditions:
 - G is connected and acyclic (contains no cycles).
 - G is acyclic, and a simple cycle is formed if any edge is added to G.
 - G is connected, but would become disconnected if any single edge is removed from G.
-- G is connected and the 3-vertex complete graph K3 is not a minor of G.
+- G is connected and the 3-vertex complete graph K3 is not a minor of G. (explanation of K3: https://en.wikipedia.org/wiki/Complete_graph)
 - Any two vertices in G can be connected by a unique simple path.<br/><br/>
-Since trees are graphs, and graphs consist of nodes, trees also consist of nodes. Trees also have children, and are therefore directional graphs by design. A node in a tree has child node(s), and a parent node. A common form of a tree is a bianry tree, and more advanced, a binary search tree (BST), more on those as I implement them. For now, all trees will be binary for simplicity's sake, meaning each node cannot have more than two children, they will not necesarilly be BSTs though, if they are, it is pure accident!.
+Since trees are graphs, and graphs consist of nodes, trees also consist of nodes. Trees also have children, and are therefore digraphs by design. A node in a tree has child node(s), and a parent node. A common form of a tree is a bianry tree, and more advanced, a binary search tree (BST), more on those as I implement them. For now, all trees will be binary for simplicity's sake, meaning each node cannot have more than two children, they will not necesarilly be BSTs though, if they are, it is pure accident!.
 - Let's say we have the set V{A, B, C}, and the set E{(A->B), (A->C)}
 - This constitutes graph G(V{A, B, C}, E{(A->B), (A->C)}).
 - G would look like this:
@@ -166,7 +165,8 @@ FYI: Wikipedia is a great source of information, but I cannot stress enough the 
 14. Bidirectional Graph: https://en.wikipedia.org/wiki/Bidirected_graph
 15. Undirected Graph: https://mathinsight.org/definition/undirected_graph
 16. Directed Graph: https://en.wikipedia.org/wiki/Directed_graph
-17. Glossary of Graph Theory (Definitions & Terms): https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms
+17. Complete Graphs: https://en.wikipedia.org/wiki/Complete_graph
+18. Glossary of Graph Theory (Definitions & Terms): https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms
 
 ### Sources:
 Taught me everything I know about Data structures & algorithms, their design & their analysis.

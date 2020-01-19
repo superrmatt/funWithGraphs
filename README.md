@@ -7,6 +7,7 @@
     - [Unigraph](https://github.com/superrmatt/oddCycleDetector#unigraph)
     - [Digraph](https://github.com/superrmatt/oddCycleDetector#digraph)
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree)
+    - [Cycles](https://github.com/superrmatt/oddCycleDetector#cycles)
 3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree-1)
     - [Graph](https://github.com/superrmatt/oddCycleDetector#graph)
@@ -46,9 +47,17 @@
 >                    \ /
 >                     C
 
-
-
  #### Digraph
+ &nbsp;&nbsp;&nbsp;&nbsp; Much like a unigraph, a digraph has edges with direction. Meaning they can only be traversed in one direction. Or, more simply, that one node points to another node, a one way street. Another way of saying this would be that a digraph has edges with orientation. Yet another way, is the one often referred to in practice with programming, a parent->child relationship. The parent->child relationship is the one I will use from this point on. These are much harder to build with a keyboard, we lack the characters. Instead, I will denote an arrow in the set of edges. The examples are the same as above, so should be straightforward.
+ - Let's say we have the set V{A, B, C, D},
+ - And the set E{(A->B), (B->C), (A->C) (A->D)}. In this case, direction matters. (A->B != A<-B).
+ - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}). <br/>
+ - Now, add the set V{E, F, G}.
+ - And the set E{(D->E), (B->F), (E->F), (A->F)}.
+ - Therefore, our graph is now: G = (V{A, B, C, D, E, F, G}, E{(A->B), (B->C), (A->C) (A->D), (D->E), (B->F), (E->F), (A->F)})
+Again, can't really represent these with letter type. Same examples as above, but with arrows denoting direction from the parent node, to the child node.
+
+ #### Cycles
 
  #### Tree  
 

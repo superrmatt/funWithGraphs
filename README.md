@@ -1,4 +1,4 @@
-# Odd Cycle Detector
+# Fun With Graphs
 
 ## Table of Contents
 1. [Introduction](https://github.com/superrmatt/oddCycleDetector#introduction)

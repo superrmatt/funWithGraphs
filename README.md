@@ -151,7 +151,7 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
         - While Q is not empty,
             - Remove a node from the queue and store in temporary Tree instance.
             - If the temporary matches the node we are searching for, return that node.
-            - Else: add the all children of that node to the queue.
+            - Else: add all children of that node to the queue.
         - Node never found, Q is empty: all nodes traversed.
 
 ### Further Work:

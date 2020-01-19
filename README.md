@@ -10,14 +10,14 @@
     - [Cycles](https://github.com/superrmatt/oddCycleDetector#cycles)
 3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree-1)
-        - [Driver.java]()
-        - [Tree.java]()
+        - [TreeDriver.java](https://github.com/superrmatt/funWithGraphs#treedriverjava)
+        - [Tree.java](https://github.com/superrmatt/funWithGraphs#treejava)
     - [Graph](https://github.com/superrmatt/oddCycleDetector#graph)
-        - [Driver.java]()
-        - [Node.java]()
+        - [GraphDriver.java](https://github.com/superrmatt/funWithGraphs#graphdriverjava)
+        - [Node.java](https://github.com/superrmatt/funWithGraphs#nodedriverjava)
 4. [Algorithms](https://github.com/superrmatt/oddCycleDetector#algorithms)
-    - [Graph]()
-    - [Tree]()
+    - [Graph](https://github.com/superrmatt/funWithGraphs#graph-1)
+    - [Tree](https://github.com/superrmatt/funWithGraphs#tree-2)
 5. [Further Work](https://github.com/superrmatt/oddCycleDetector#further-work)
 6. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
 7. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
@@ -130,6 +130,7 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
    - Node.java is the class for each node. A graph consists of at least two nodes. A Node holds a reference to its neighbors and its values. It contains accessor methods, constructors, and the algorithms.
 
 ### Algorithms
+
     **Coming Soon**
     effiecency, method, algorithm, etc
   #### Tree

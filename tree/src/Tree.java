@@ -99,20 +99,4 @@ public class Tree<T> {
         return Optional.empty();
     }
 
-    public void preOrderTraversal() {
-        Stack<Tree<T>> stack = new Stack<Tree<T>>();
-        Tree<T> current = root;
-        stack.push(root);
-        while(!stack.isEmpty()) {
-            current = stack.pop();
-            visit(current.value);
-             
-            if(current.right != null) {
-                stack.push(current.right);
-            }    
-            if(current.left != null) {
-                stack.push(current.left);
-            }
-        }        
-    }
 }

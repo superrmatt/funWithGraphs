@@ -15,18 +15,25 @@ public class Tree<T> {
     /**
      * value of type T
      */
-    private  T value;
+    private T value;
 
     /**
      * List of Tree<T> of all the children
      */
-    private  List<Tree<T>> children;
+    private List<Tree<T>> children;
+
+    /**
+     * Left and right child. First and second index of list respectively.
+     * These variables can only rightfully be used on a binary tree, due to the "left & "right" nature of them.
+     */
+    private Tree<T> left = children.get(0);
+    private Tree<T> right = children.get(1);
  
     /**
      * Constructor
      * @param value of type T. value to be given to this node.
      */
-    private Tree( T value) {
+    private Tree(T value) {
         this.value = value;
         this.children = new ArrayList<>();
     }
@@ -36,7 +43,7 @@ public class Tree<T> {
      * @param value of type T
      * @return new Tree with the specified vertex
      */
-    public static <T> Tree<T> makeRoot( T value) {
+    public static <T> Tree<T> makeRoot(T value) {
         return new Tree<>(value);
     }
  
@@ -44,7 +51,7 @@ public class Tree<T> {
      * add a child node to this
      * @param value of type T. The value of the child to add.
      */
-    public Tree<T> addChild( T value) {
+    public Tree<T> addChild(T value) {
          Tree<T> newChild = new Tree<>(value);
         children.add(newChild);
         return newChild;
@@ -71,7 +78,7 @@ public class Tree<T> {
      * @param root the node to start our breadth-first-search from.
      * @return the found node or empty() if node not found.
      */
-    public static <T> Optional<Tree<T>> breadthFirstSearch( T value,  Tree<T> root) {
+    public static <T> Optional<Tree<T>> breadthFirstSearch(T value, Tree<T> root) {
         //Use a queue to traverse the nodes. Add root node to queue.
         Queue<Tree<T>> queue = new ArrayDeque<>();
         queue.add(root);
@@ -90,5 +97,22 @@ public class Tree<T> {
         }
         //If queue is empty, node not found.
         return Optional.empty();
+    }
+
+    public void preOrderTraversal() {
+        Stack<Tree<T>> stack = new Stack<Tree<T>>();
+        Tree<T> current = root;
+        stack.push(root);
+        while(!stack.isEmpty()) {
+            current = stack.pop();
+            visit(current.value);
+             
+            if(current.right != null) {
+                stack.push(current.right);
+            }    
+            if(current.left != null) {
+                stack.push(current.left);
+            }
+        }        
     }
 }

@@ -39,9 +39,25 @@ public class Tree<T> {
     public static <T> Tree<T> makeRoot(T value) {
         return new Tree<>(value);
     }
+
+    /**
+     * Acessor method for the left child of this Tree node.
+     * @return the left child of type Tree<T>.
+     */
+    public Tree<T> getLeft(){
+        return children.get(0);
+    }
+
+    /**
+     * Acessor method for the right child of this Tree node.
+     * @return the right child of type Tree<T>.
+     */
+    public Tree<T> getRight(){
+        return children.get(1);
+    }
  
     /**
-     * add a child node to this
+     * add a child node to this node
      * @param value of type T. The value of the child to add.
      */
     public Tree<T> addChild(T value) {
@@ -92,5 +108,20 @@ public class Tree<T> {
         //If queue is empty, node not found.
         System.out.println("Node " + value + " Not found.");
         return Optional.empty();
+    }
+
+    /**
+     * A pre order traversal method which runs recursively.
+     * @param node the node to start at.
+     */
+    public void preOrderRecursive(Tree<T> node){
+        if (node != null) {
+            System.out.println("Visiting node " + node.value);
+            preOrderRecursive(node.getLeft());
+            preOrderRecursive(node.getRight());
+        }
+        else {
+            System.out.println("Nothing to traverse");
+        }
     }
 }

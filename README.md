@@ -64,8 +64,8 @@
 Again, can't really represent these with letter type. Same examples as above, but with arrows denoting direction from the parent node, to the child node.
 
  #### Cycles
- &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. For the following examples, direction, or lackthereof does not matter, but we will assume all of the following examples are unigraphs. 
- - In the first above, with the graph G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}s):
+ &nbsp;&nbsp;&nbsp;&nbsp; A cycle is straightforward. It is simply when a graph has a closed loop. This makes algorithms on them a little more challenging and time consuming than a cycleless graph (such as a tree). This is because, in order to not get trapped in the cycle in an endless loop, extra steps need to be taken. Those can be seen in the code for algorithms on graphs. A graph is said to have a cycle if some set of verticies are connected in a closed chain. For the following examples, direction, or lackthereof, does not matter, but we will assume all of the following examples are unigraphs. 
+ - In the first above, with the graph G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C) (A,D)}):
 >                 D  
 >                  \  
 >                   A - B

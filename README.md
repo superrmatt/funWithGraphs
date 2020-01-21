@@ -31,7 +31,7 @@
 
 ### Theory
  #### Unigraph
- &nbsp;&nbsp;&nbsp;&nbsp;  Often simply referred to as a graph, a unigraph is a graph whose edges have no direction. A graph is an ordered pair where G = (V,E). V is a set of vertices, and E is a set of edges connecting those vertices. An edge is associated with two distinct vertices.
+ &nbsp;&nbsp;&nbsp;&nbsp;  Often simply referred to as a graph, a unigraph is a graph whose edges have no direction. A graph is an ordered pair where G = (V, E). V is a set of vertices, and E is a set of edges connecting those vertices. An edge is associated with two distinct vertices.
  - Let's say we have the set V{A, B, C, D},
  - And the set E{(A,B), (B,C), (A,C) (A,D)}. 
  - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C), (A,D)}).

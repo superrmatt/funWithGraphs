@@ -32,6 +32,7 @@
 ### Theory
  #### Unigraph
  &nbsp;&nbsp;&nbsp;&nbsp;  Often simply referred to as a graph, a unigraph is a graph whose edges have no direction. A graph is an ordered pair where G = (V, E). V is a set of vertices, and E is a set of edges connecting those vertices. An edge is associated with two distinct vertices.
+   ##### example 1:
  - Let's say we have the set V{A, B, C, D},
  - And the set E{(A,B), (B,C), (A,C), (A,D)}. 
  - Therefore, G = (V{A, B, C, D}, E{(A,B), (B,C), (A,C), (A,D)}).
@@ -41,6 +42,7 @@
 >                   A - B
 >                    \ /
 >                     C
+  ##### example 2:
 - Let's now add the set V{E, F, G}.
 - And the set E{(D,E), (B,F), (E,F), (A,F)}.
 - Therefore, our graph is now: G = (V{A, B, C, D, E, F, G}, E{(A,B), (B,C), (A,C), (A,D), (D,E), (B,F), (E,F), (A,F)})
@@ -97,13 +99,15 @@ A tree is an undirected graph G that satisfies any of the following equivalent c
 - G is connected, but would become disconnected if any single edge is removed from G.
 - G is connected and the 3-vertex complete graph K3 is not a minor of G. (explanation of K3: https://en.wikipedia.org/wiki/Complete_graph)
 - Any two vertices in G can be connected by a unique simple path.<br/><br/>
-Since trees are graphs, and graphs consist of nodes, trees also consist of nodes. Trees also have children, and are therefore digraphs by design. A node in a tree has child node(s), and a parent node. A common form of a tree is a bianry tree, and more advanced, a binary search tree (BST), more on those as I implement them. For now, all trees will be binary for simplicity's sake, meaning each node cannot have more than two children, they will not necesarilly be BSTs though, if they are, it is pure accident!.
+Since trees are graphs, and graphs consist of nodes, trees also consist of nodes. Trees also have children, and are therefore digraphs by design. A node in a tree has child node(s), and a parent node. A common form of a tree is a bianry tree, and more advanced, a binary search tree (BST), more on those as I implement them. For now, all trees will be binary for simplicity's sake, meaning each node cannot have more than two children, they will not necesarilly be BSTs though, if they are, it is pure accident.
+ ##### example 1:
 - Let's say we have the set V{A, B, C}, and the set E{(A->B), (A->C)}
 - This constitutes graph G(V{A, B, C}, E{(A->B), (A->C)}).
 - G would look like this:
 >                         A 
 >                        / \ 
 >                       B   C
+ ##### example 2:
 - Now, add the nodes D, E, F to set V. V{A, B, C, D, E, F}.
 - And the edges (B->D), (B->E), (C->F).
 - So, G = (V{A, B, C, D, E, F}, E{(A->B), (A->C), (B->D), (B->E), (C->F)})

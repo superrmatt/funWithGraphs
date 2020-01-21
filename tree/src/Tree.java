@@ -83,12 +83,14 @@ public class Tree<T> {
 
             //If we found the node, return it. Else add all its children to our queue.
             if (visitingNode.getValue().equals(value)) {
+                System.out.println("Node Found. Node: " + visitingNode.getValue());
                 return Optional.of(visitingNode);
             } else {
                 queue.addAll(visitingNode.getChildren());
             }
         }
         //If queue is empty, node not found.
+        System.out.println("Node " + value + " Not found.");
         return Optional.empty();
     }
 }

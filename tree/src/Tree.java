@@ -21,13 +21,6 @@ public class Tree<T> {
      * List of Tree<T> of all the children
      */
     private List<Tree<T>> children;
-
-    /**
-     * Left and right child. First and second index of list respectively.
-     * These variables can only rightfully be used on a binary tree, due to the "left & "right" nature of them.
-     */
-    private Tree<T> left = children.get(0);
-    private Tree<T> right = children.get(1);
  
     /**
      * Constructor
@@ -98,5 +91,4 @@ public class Tree<T> {
         //If queue is empty, node not found.
         return Optional.empty();
     }
-
 }

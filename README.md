@@ -8,7 +8,7 @@
     - [Digraph](https://github.com/superrmatt/oddCycleDetector#digraph)
     - [Tree](https://github.com/superrmatt/oddCycleDetector#tree)
     - [Cycles](https://github.com/superrmatt/oddCycleDetector#cycles)
-3. [Source Folders](https://github.com/superrmatt/oddCycleDetector#source-folders)
+3. [Source Code Folders](https://github.com/superrmatt/oddCycleDetector#source-code-folders)
     - [Graph](https://github.com/superrmatt/oddCycleDetector#graph)
         - [GraphDriver.java](https://github.com/superrmatt/funWithGraphs#graphdriverjava)
         - [Node.java](https://github.com/superrmatt/funWithGraphs#nodedriverjava)
@@ -118,7 +118,7 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 >                      / \   \
 >                     D   E   F
 
-### Source Folders
+### Source Code Folders
 
  #### Graph
   ##### GraphDriver.java

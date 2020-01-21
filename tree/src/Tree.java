@@ -1,9 +1,9 @@
 import java.util.*;
 
-
 /**
  * Tree class of type <T>
- * Each instance has a value (often called vertex) and a List<Tree<T>> of children
+ * Each instance has a value (often called vertex) and a List<Tree<T>> of children.
+ * Therefore, each instance of the class Tree<T> is actually an instance of a singular node in the tree structure to be, or being built.
  * In graph theory, all trees are graphs, but not all graphs are trees.
  * Each tree consists of a root node, which has 0 to many children. a Binary tree is defined as a tree with no more than two children.
  * Binary trees are probably the easiest to understand and conceptualize.
@@ -34,7 +34,7 @@ public class Tree<T> {
     /**
      * makes a root node
      * @param value of type T
-     * @return new Tree with the specified vertex
+     * @return new Tree Node with the specified vertex
      */
     public static <T> Tree<T> makeRoot(T value) {
         return new Tree<>(value);

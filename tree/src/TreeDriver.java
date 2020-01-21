@@ -11,12 +11,6 @@ public class TreeDriver{
 
         /**
          * create our sample tree via Tree<T> class, <T> in this case is <String>
-         * looks like:
-         *         10
-         *        /  \
-         *       2    4
-         *      /
-         *     3
          */
         Tree<String> A = Tree.makeRoot("A");
         Tree<String> B = A.addChild("B");

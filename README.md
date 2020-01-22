@@ -177,7 +177,7 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
                     - Initialize current as S.pop()
                     - If current is the value to search for, return
                     - Else: Get children of current
-                -Node never found S is empty: all nodes traversed.
+                - Node never found S is empty: all nodes traversed.
             
 
 

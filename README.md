@@ -20,6 +20,8 @@
         - [Breadth First Search](https://github.com/superrmatt/funWithGraphs#breadth-first-search)
     - [Tree](https://github.com/superrmatt/funWithGraphs#tree-2)
         - [Breadth First Search](https://github.com/superrmatt/funWithGraphs#breadth-first-search-1)
+        - [Depth First Search](https://github.com/superrmatt/funWithGraphs#depth-first-search)
+            - [Preorder Traversal](https://github.com/superrmatt/funWithGraphs#preorer-traversal)
 5. [Further Work](https://github.com/superrmatt/oddCycleDetector#further-work)
 6. [Supplemental Reading](https://github.com/superrmatt/oddCycleDetector#supplemental-reading)
 7. [Sources](https://github.com/superrmatt/oddCycleDetector#sources)
@@ -152,13 +154,32 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 
   #### Tree
 - ##### Breadth First Search
-    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). One of the fundamental differences between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will always be n - 1.
-        - With a set of traversable nodes Q:
+    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). One of the fundamental differences between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will never be more than n - 1.
+        - With a queue of traversable nodes Q:
         - While Q is not empty,
             - Remove a node from the queue and store reference in temporary Tree instance.
             - If the temporary matches the node we are searching for, return that node.
             - Else: add all children of that node to the queue.
         - Node never found, Q is empty: all nodes traversed.
+- ##### Depth First Search
+    - Depth first search on a tree can be implemented in three different methods: preorder traversal, inorder traversal, and postorder traversal. More on each below, as they are implemented. 
+    - Much like BFS, DFS is also calculated in 0(n) time. Since each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n + c). Where n is the number of nodes and c is the nubmer of edges. Since a binary tree's nodes will have at most two edges, a node will never have more than n - 1 edges.
+   - ###### Preorder Traversal
+    - Recursive:
+        - Visit root node
+        - if root matches node to search for, return it.
+            - recursively return left child
+            - recursively return right child
+    - Iterative: 
+        - With stack of traversaable nodes S:
+            - push root node to S
+            - while S is not empty:
+                - Initialize current as S.pop()
+                - If current is the value to search for, return
+                - Else: Get children of current
+            -Node never found S is empty: all nodes traversed.
+            
+
 
 ### Further Work:
 - Depth First Search

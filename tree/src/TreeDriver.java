@@ -29,5 +29,6 @@ public class TreeDriver{
         Tree<String> O = G.addChild("O"); 
         
         Tree.breadthFirstSearch("O", A);
+        Tree.preOrderRecursive("O", A);
     }
 }

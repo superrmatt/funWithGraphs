@@ -188,7 +188,8 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 15. Undirected Graph: https://mathinsight.org/definition/undirected_graph
 16. Directed Graph: https://en.wikipedia.org/wiki/Directed_graph
 17. Complete Graphs: https://en.wikipedia.org/wiki/Complete_graph
-18. Glossary of Graph Theory (Definitions & Terms): https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms
+18. Traversal Methods of Trees: https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+19. Glossary of Graph Theory (Definitions & Terms): https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms
 
 ### Sources:
 Taught me everything I know about Data structures & algorithms, their design & their analysis.

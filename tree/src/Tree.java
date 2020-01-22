@@ -39,22 +39,6 @@ public class Tree<T> {
     public static <T> Tree<T> makeRoot(T value) {
         return new Tree<>(value);
     }
-
-    /**
-     * Acessor method for the left child of this Tree node.
-     * @return the left child of type Tree<T>.
-     */
-    public Tree<T> getLeft(){
-        return children.get(0);
-    }
-
-    /**
-     * Acessor method for the right child of this Tree node.
-     * @return the right child of type Tree<T>.
-     */
-    public Tree<T> getRight(){
-        return children.get(1);
-    }
  
     /**
      * add a child node to this node
@@ -78,6 +62,44 @@ public class Tree<T> {
      */
     public List<Tree<T>> getChildren(){
         return this.children;
+    }
+
+    /**
+     * Acessor method for the left child of this Tree node.
+     * @return the left child of type Tree<T>.
+     */
+    public Tree<T> getLeft(){
+        return children.get(0);
+    }
+
+    /**
+     * Acessor method for the right child of this Tree node.
+     * @return the right child of type Tree<T>.
+     */
+    public Tree<T> getRight(){
+        return children.get(1);
+    }
+    
+    /**
+     * does left child exist?
+     * @return true if left exists, false if not
+     */
+    public boolean isLeft(){
+        if(children.size() > 0)
+            return true;
+        else
+            return false;
+    }
+
+    /**
+     * does right child exist?
+     * @return true if left exists, false if not
+     */
+    public boolean isRight(){
+        if(children.size() > 1)
+            return true;
+        else
+            return false;
     }
 
     /**
@@ -110,20 +132,45 @@ public class Tree<T> {
         return Optional.empty();
     }
 
+    // -------------------------- Depth First Search Implementations --------------------------
+    /**
+     * Below is a few implementations of a depth first search on a tree.
+     * Since we can traverse a tree in three ways:
+     *  - pre order traversal
+     *  - inorder traversal
+     *  - postorder traversal
+     * (More on each traversal style here: https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+     * & Since we can implement each recursively and iteratively:
+     *  There exist a total of 6 methods below.
+     * They will all take two arguments: root, and value.
+     * Root will be the starting node. And value will be the value of the node to search for.
+     */
+
+
     /**
      * A recursive pre order traversal method.
      * Used for depth first search algorithm.
-     * @param node the node to start at.
+     * @param value the value to search for.
+     * @param root the node to start at.
      */
-    public void preOrderRecursive(Tree<T> node){
-        if (node != null) {
-            System.out.println("Visiting node " + node.value);
-            preOrderRecursive(node.getLeft());
-            preOrderRecursive(node.getRight());
+    public static <T> Optional<Tree<T>> preOrderRecursive(T value, Tree<T> root){
+        //if node vlaue is correct, return it.
+        if(root.getValue() == value){
+            return Optional.of(root);
+        } 
+        //if root is not null, recursive call to this method with left node then right node.
+        if (root != null) {
+            System.out.println("Visiting node " + root.getValue());
+            if(root.isLeft() == true){
+                preOrderRecursive(value, root.getLeft());
+            }
+            if(root.isRight() == true){
+                preOrderRecursive(value, root.getRight());
+            }
         }
-        else {
-            System.out.println("Nothing to traverse");
-        }
+        //return empty, node not found        
+        System.out.println("Nothing to traverse, node not found.");
+        return Optional.empty();
     }
 
     /**
@@ -146,6 +193,7 @@ public class Tree<T> {
             if(visiting.getLeft() != null) {
                 stack.push(visiting.getLeft());
             }
+        }
 
     }
 }

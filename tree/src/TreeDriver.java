@@ -9,9 +9,8 @@ public class TreeDriver{
      */
     public static void main(String[] args){
 
-        /**
-         * create our sample tree via Tree<T> class, <T> in this case is <String>
-         */
+        
+        //create our sample tree via Tree<T> class, <T> in this case is <String>
         Tree<String> A = Tree.makeRoot("A");
         Tree<String> B = A.addChild("B");
         Tree<String> C = A.addChild("C");
@@ -28,7 +27,9 @@ public class TreeDriver{
         Tree<String> N = G.addChild("N");
         Tree<String> O = G.addChild("O"); 
         
+        //call the search algos
         Tree.breadthFirstSearch("O", A);
         Tree.preOrderRecursive("O", A);
+        Tree.preOrderIterative("O", A);
     }
 }

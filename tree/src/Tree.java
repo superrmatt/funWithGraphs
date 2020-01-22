@@ -121,7 +121,7 @@ public class Tree<T> {
 
             //If we found the node, return it. Else add all its children to our queue.
             if (visitingNode.getValue().equals(value)) {
-                System.out.println("Node Found. Node: " + visitingNode.getValue());
+                System.out.println("breadth first Node Found: " + visitingNode.getValue());
                 return Optional.of(visitingNode);
             } else {
                 queue.addAll(visitingNode.getChildren());
@@ -154,8 +154,9 @@ public class Tree<T> {
      * @param root the node to start at.
      */
     public static <T> Optional<Tree<T>> preOrderRecursive(T value, Tree<T> root){
-        //if node vlaue is correct, return it.
+        //if node value is correct, return it.
         if(root.getValue() == value){
+            System.out.println("Recursive pre order Node found: " + root.getValue());
             return Optional.of(root);
         } 
         //if root is not null, recursive call to this method with left node then right node.
@@ -178,22 +179,30 @@ public class Tree<T> {
      * Used for depth first search algorithm.
      * @param node the node to start at.
      */
-    public void preOrderIterative(Tree<T> Node){
+    public static <T> Optional<Tree<T>> preOrderIterative(T value, Tree<T> root){
+        //stack for storage of searchable nodes
         Stack<Tree<T>> stack = new Stack<Tree<T>>();
-        Tree<T> visiting = Node;
-        stack.push(Node);
+        Tree<T> visiting = root;
+        stack.push(root);
 
         while(!stack.isEmpty()) {
             visiting = stack.pop();
             System.out.println("current node is " + visiting.value);
-             
-            if(visiting.getRight() != null) {
-                stack.push(visiting.getRight());
-            }    
-            if(visiting.getLeft() != null) {
+            if(visiting.getValue() == value){
+                System.out.println("Iterative pre order Node found: " + visiting.getValue());
+                return Optional.of(visiting);
+            }
+               
+            if(visiting.isLeft() == true) {
                 stack.push(visiting.getLeft());
             }
+            if(visiting.isRight() == true) {
+                stack.push(visiting.getRight());
+            }  
         }
+
+        System.out.println("Nothing left to traverse, node not found");
+        return Optional.empty();
 
     }
 }

@@ -111,7 +111,8 @@ public class Tree<T> {
     }
 
     /**
-     * A pre order traversal method which runs recursively.
+     * A recursive pre order traversal method.
+     * Used for depth first search algorithm.
      * @param node the node to start at.
      */
     public void preOrderRecursive(Tree<T> node){
@@ -123,5 +124,28 @@ public class Tree<T> {
         else {
             System.out.println("Nothing to traverse");
         }
+    }
+
+    /**
+     * An iterative pre order traversal method.
+     * Used for depth first search algorithm.
+     * @param node the node to start at.
+     */
+    public void preOrderIterative(Tree<T> Node){
+        Stack<Tree<T>> stack = new Stack<Tree<T>>();
+        Tree<T> visiting = Node;
+        stack.push(Node);
+
+        while(!stack.isEmpty()) {
+            visiting = stack.pop();
+            System.out.println("current node is " + visiting.value);
+             
+            if(visiting.getRight() != null) {
+                stack.push(visiting.getRight());
+            }    
+            if(visiting.getLeft() != null) {
+                stack.push(visiting.getLeft());
+            }
+
     }
 }

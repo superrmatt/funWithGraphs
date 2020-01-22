@@ -23,7 +23,8 @@ public class Tree<T> {
     private List<Tree<T>> children;
  
     /**
-     * Constructor
+     * Constructor, is only called by makeRoot(T value), or addChild(T value).
+     * This is because we do not want to make a node standalone, then it wouldn't be a tree.
      * @param value of type T. value to be given to this node.
      */
     private Tree(T value) {
@@ -32,7 +33,7 @@ public class Tree<T> {
     }
  
     /**
-     * makes a root node
+     * Makes a root node, calls constructor.
      * @param value of type T
      * @return new Tree Node with the specified vertex
      */
@@ -41,7 +42,7 @@ public class Tree<T> {
     }
  
     /**
-     * add a child node to this node
+     * Add a child node to this node, calls constructor
      * @param value of type T. The value of the child to add.
      */
     public Tree<T> addChild(T value) {
@@ -103,8 +104,7 @@ public class Tree<T> {
     }
 
     /**
-     * Search function, allows one to search for a node in the tree.
-     * Implemetation of a breadth-first-search.
+     * Implemetation of a breadth-first-search. Searches for the T value by starting at the root node given.
      * @param value of type T, the value we want to find.
      * @param root the node to start our breadth-first-search from.
      * @return the found node or empty() if node not found.

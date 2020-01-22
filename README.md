@@ -154,7 +154,7 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 
   #### Tree
 - ##### Breadth First Search
-    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). One of the fundamental differences between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will never be more than n - 1.
+    - Since BFS on a tree adds a node to the queue at most once, and each node is visited at most once, if n is the number of nodes in the structure, time complexity will be O(n). One of the fundamental differences between a graph and a tree, is that in a tree, the number of edges in a tree will never be greater than that of a graph, in fact, the number of edges in a tree will never be more than n - 1. Therefore, number of edges can be ignored when caluculating time complexity, which gives us O(n).
         - With a queue of traversable nodes Q:
         - While Q is not empty,
             - Remove a node from the queue and store reference in temporary Tree instance.

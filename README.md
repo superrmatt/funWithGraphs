@@ -165,19 +165,19 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
     - Depth first search on a tree can be implemented in three different methods: preorder traversal, inorder traversal, and postorder traversal. More on each below, as they are implemented. 
     - Much like BFS, DFS is also calculated in O(n) time. Since each node is visited at most once. Time complexity will be O(n + c). Where n is the number of nodes and c is the nubmer of edges. Since a binary tree's nodes will have at most two edges, cwill never have more than n - 1 edges, therefore, time complexity is O(n).
    - **Preorder Traversal**
-    - Recursive:
-        - Visit root node
-        - if root matches node to search for, return it.
-            - recursively return left child
-            - recursively return right child
-    - Iterative: 
-        - With stack of traversaable nodes S:
-            - push root node to S
-            - while S is not empty:
-                - Initialize current as S.pop()
-                - If current is the value to search for, return
-                - Else: Get children of current
-            -Node never found S is empty: all nodes traversed.
+        - *Recursive:*
+            - Visit root node
+            - if root matches node to search for, return it.
+                - recursively return left child
+                - recursively return right child
+        - *Iterative:* 
+            - With stack of traversaable nodes S:
+                - push root node to S
+                - while S is not empty:
+                    - Initialize current as S.pop()
+                    - If current is the value to search for, return
+                    - Else: Get children of current
+                -Node never found S is empty: all nodes traversed.
             
 
 

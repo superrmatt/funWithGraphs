@@ -10,7 +10,7 @@ public class GraphDriver{
     public static void main(String[] args){
         
         /**
-         * Create a sample graph via Node<T>, in this case <String>.
+         * Create a sample graph via Node<T>, in this case Node<String>.
          * Looks like:
          *                  D  
          *                   \  
@@ -20,7 +20,7 @@ public class GraphDriver{
          */
         
         //First nodeA.value = 10. nodeB.value = 2.
-        Node<String> nodeA = new Node<>("A");
+        Node<String> nodeA = new Node<>("C");
         Node<String> nodeB = new Node<>("B");
         //Connect nodeA & nodeB.
         nodeA.connect(nodeB);
@@ -34,6 +34,6 @@ public class GraphDriver{
         Node<String> nodeD = new Node<>("D");
         nodeA.connect(nodeD);
 
-        Node.breadthFirstSearch("B", nodeA);
+        Node.breadthFirstSearch("B", nodeD);
     }
 }

@@ -68,7 +68,7 @@ public class Node<T> {
 
     /**
      * Similiar to the BFS algorithm for trees, this method must account for the possibility of cycles. 
-     * Else method will run endlessly if there exists a cycle.
+     * Or else the method will run endlessly if there exists a cycle.
      * @param value the vertex value of type T to search for.
      * @param start the start node to begin the search.
      * @return the found node, or empty if node does not exist.

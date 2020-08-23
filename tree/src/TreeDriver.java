@@ -8,7 +8,6 @@ public class TreeDriver{
      * @param args arguments
      */
     public static void main(String[] args){
-
         
         //create our sample tree via Tree<T> class, <T> in this case is <String>
         Tree<String> A = Tree.makeRoot("A");
@@ -25,11 +24,11 @@ public class TreeDriver{
         Tree<String> L = F.addChild("L");
         Tree<String> M = F.addChild("M");
         Tree<String> N = G.addChild("N");
-        Tree<String> O = G.addChild("O"); 
+        Tree<String> O = G.addChild("O");
         
         //call the search algos
         Tree.breadthFirstSearch("O", A);
         Tree.preOrderRecursive("O", A);
         Tree.preOrderIterative("O", A);
-    }
+      }
 }

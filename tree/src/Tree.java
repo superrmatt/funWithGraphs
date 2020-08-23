@@ -123,9 +123,8 @@ public class Tree<T> {
             if (visitingNode.getValue().equals(value)) {
                 System.out.println("breadth first Node Found: " + visitingNode.getValue());
                 return Optional.of(visitingNode);
-            } else {
+            } else
                 queue.addAll(visitingNode.getChildren());
-            }
         }
         //If queue is empty, node not found.
         System.out.println("Node " + value + " Not found.");
@@ -162,12 +161,12 @@ public class Tree<T> {
         //if root is not null, recursive call to this method with left node then right node.
         if (root != null) {
             System.out.println("Visiting node " + root.getValue());
-            if(root.isLeft() == true){
+            if(root.isLeft() == true)
                 preOrderRecursive(value, root.getLeft());
-            }
-            if(root.isRight() == true){
+            
+            if(root.isRight() == true)
                 preOrderRecursive(value, root.getRight());
-            }
+            
         }
         //return empty, node not found        
         System.out.println("Nothing to traverse, node not found.");
@@ -193,12 +192,12 @@ public class Tree<T> {
                 return Optional.of(visiting);
             }
                
-            if(visiting.isLeft() == true) {
+            if(visiting.isLeft() == true)
                 stack.push(visiting.getLeft());
-            }
-            if(visiting.isRight() == true) {
+            
+            if(visiting.isRight() == true)
                 stack.push(visiting.getRight());
-            }  
+              
         }
 
         System.out.println("Nothing left to traverse, node not found");

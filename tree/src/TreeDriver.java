@@ -9,7 +9,7 @@ public class TreeDriver{
      */
     public static void main(String[] args){
         
-        //create our sample tree via Tree<T> class, <T> in this case is <String>
+        //create our sample tree via Tree<T> class. <T> in this case is <String>
         Tree<String> A = Tree.makeRoot("A");
         Tree<String> B = A.addChild("B");
         Tree<String> C = A.addChild("C");

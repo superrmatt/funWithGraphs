@@ -7,7 +7,7 @@ import java.util.*;
  * In graph theory, all trees are graphs, but not all graphs are trees.
  * Each tree consists of a root node, which has 0 to many children. a Binary tree is defined as a tree with no more than two children.
  * Binary trees are probably the easiest to understand and conceptualize.
- * a binary search tree (BST) would be a tree that is sorted and has two children.
+ * a binary search tree (BST) would be a tree that is sorted and has no more than two children.
  * More on Trees here: https://en.wikipedia.org/wiki/Tree_(data_structure)
  */
 public class Tree<T> {
@@ -204,4 +204,45 @@ public class Tree<T> {
         return Optional.empty();
 
     }
+
+    // -------------------------- Delete Implementations --------------------------
+    /**
+     * A removal algorithm with a known starting point.
+     * calls breadthFirstSearch(value, root) to find the value to remove. But how do I remove? I think call constructor with new values to recreate tree. This will be time consuming with large n value.
+     * @param value of type T, the value to remove.
+     * @param root the starting point on the Tree to search.
+     */
+
+    public static <T> Optional<Tree<T>> remove(T value, Tree<T> root){
+        
+        if(root == null){
+            System.out.println("Tree " + root.getValue() + "is empty");
+            return Optional.empty();
+        }
+        
+        Optional<Tree<T>> node = breadthFirstSearch(value, root); //find the node to remove as node.
+        if (node == null){
+            System.out.println("Node " + value + "not found");
+            return Optional.empty();
+        }
+
+
+        
+
+        
+        return Optional.empty();
+    }    
+
+    // -------------------------- Insert Implementations --------------------------
+    /**
+     * An insert algorithm
+     * calls breadthFirstSearch(value, root) to find the insertion point.
+     * @param value of type T, the value to insert.
+     * @param root the point on the Tree to insert at.
+     */
+
+     public static void insert(T value, Tree<T> root){
+
+     }
+
 }

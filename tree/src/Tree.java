@@ -7,7 +7,7 @@ import java.util.*;
  * In graph theory, all trees are graphs, but not all graphs are trees.
  * Each tree consists of a root node, which has 0 to many children. a Binary tree is defined as a tree with no more than two children.
  * Binary trees are probably the easiest to understand and conceptualize.
- * a binary search tree (BST) would be a tree that is sorted.
+ * a binary search tree (BST) would be a tree that is sorted and has two children.
  * More on Trees here: https://en.wikipedia.org/wiki/Tree_(data_structure)
  */
 public class Tree<T> {

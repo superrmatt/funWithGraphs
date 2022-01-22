@@ -226,9 +226,6 @@ public class Tree<T> {
             return Optional.empty();
         }
 
-
-        
-
         
         return Optional.empty();
     }    
@@ -241,8 +238,8 @@ public class Tree<T> {
      * @param root the point on the Tree to insert at.
      */
 
-     public static void insert(T value, Tree<T> root){
-
-     }
+    public void insert(T value, Tree<T> root){
+        
+    }
 
 }

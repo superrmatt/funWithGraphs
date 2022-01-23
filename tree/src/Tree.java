@@ -220,7 +220,7 @@ public class Tree<T> {
             return Optional.empty();
         }
         
-        Optional<Tree<T>> node = breadthFirstSearch(value, root); //find the node to remove as node.
+        Optional<Tree<T>> node = breadthFirstSearch(value, root); //find the node to remove.
         if (node == null){
             System.out.println("Node " + value + "not found");
             return Optional.empty();

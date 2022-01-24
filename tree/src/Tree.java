@@ -241,8 +241,10 @@ public class Tree<T> {
      */
 
     public static <T> Optional<Tree<T>> insert(T value, Tree<T> root){
-        
+        System.out.println("Starting insertion"); //debug
+
         if(root == null){ //if root is null, create a new tree with T value. Aka: insert node at top.
+            System.out.println("root is null"); //debug
             root = makeRoot(value);
             return Optional.of(root);
         }
@@ -250,12 +252,15 @@ public class Tree<T> {
         Queue<Tree<T>> queue = new LinkedList<Tree<T>>(); //create queue of nodes
         queue.add(root); //add root node to the queue.
 
+        System.out.println("queue instantiated"); //debug
         //traverse until empty is found.
         while(!queue.isEmpty()){
+            System.out.println("while"); //debug
             root = queue.peek();
             queue.remove();
 
             if(root.isLeft() == false){
+                System.out.println("root.isLeft == false"); //debug
                 root.addChild(value);
                 break;
             } else {
@@ -263,6 +268,7 @@ public class Tree<T> {
             }
 
             if(root.isRight() == false){
+                System.out.println("root.isRight == false"); //debug
                 root.addChild(value);
                 break;
             } else {

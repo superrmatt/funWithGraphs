@@ -25,10 +25,15 @@ public class TreeDriver{
         Tree<String> M = F.addChild("M");
         Tree<String> N = G.addChild("N");
         Tree<String> O = G.addChild("O");
-        
+
         //call the search algos
         Tree.breadthFirstSearch("O", A);
         Tree.preOrderRecursive("O", A);
         Tree.preOrderIterative("O", A);
+
+        //call the insert algo
+        A.insert("P", A);
+        //test it worked.
+        Tree.breadthFirstSearch("P", A);
       }
 }

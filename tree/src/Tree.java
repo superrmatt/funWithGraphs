@@ -103,6 +103,7 @@ public class Tree<T> {
             return false;
     }
 
+
     /**
      * Implemetation of a breadth-first-search. Searches for the T value by starting at the root node given.
      * @param value of type T, the value we want to find.
@@ -140,7 +141,7 @@ public class Tree<T> {
      *  - postorder traversal
      * (More on each traversal style here: https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
      * & Since we can implement each recursively and iteratively:
-     *  There exist a total of 6 methods below.
+     * There exist a total of 6 methods below (eventually =D).
      * They will all take two arguments: root, and value.
      * Root will be the starting node. And value will be the value of the node to search for.
      */
@@ -234,17 +235,16 @@ public class Tree<T> {
     /**
      * An insert algorithm
      * Inserts at the first empty place in the tree, NOT designed for Search Trees (Ex: BST)
-     * Returns the new Tree with inserted value.
      * @param value of type T, the value to insert.
      * @param root the point on the Tree to insert at.
      */
 
-    public Tree<T> insert(T value, Tree<T> root){
+    public static <T> Optional<Tree<T>> insert(T value, Tree<T> root){
         
         root.getClass();
         if(root == null){
             root = makeRoot(value);
-            return root;
+            return Optional.of(root);
         }
 
         Queue<Tree<T>> queue = new LinkedList<Tree<T>>(); //create queue of nodes
@@ -255,11 +255,11 @@ public class Tree<T> {
             queue.remove();
 
             if(root.isLeft() == false){
-                
+                root.addChild(value);
             }
         }
 
-        return root;
+        return;
     }
 
 }

@@ -231,18 +231,18 @@ public class Tree<T> {
         return Optional.empty();
     }    
 
-    // -------------------------- Insert Implementations --------------------------
+    // -------------------------- Insert Implementation(s) --------------------------
     /**
      * An insert algorithm
-     * Inserts at the first empty place in the tree, NOT designed for Search Trees (Ex: BST)
+     * Inserts at the first empty place in the tree, NOT designed for Search Trees (Ex: BST).
+     * Returns empty if no insert, and the new tree if insert suceeded.
      * @param value of type T, the value to insert.
      * @param root the point on the Tree to insert at.
      */
 
     public static <T> Optional<Tree<T>> insert(T value, Tree<T> root){
         
-        root.getClass();
-        if(root == null){
+        if(root == null){ //if root is null, create a new tree with T value. Aka: insert node at top.
             root = makeRoot(value);
             return Optional.of(root);
         }
@@ -250,16 +250,27 @@ public class Tree<T> {
         Queue<Tree<T>> queue = new LinkedList<Tree<T>>(); //create queue of nodes
         queue.add(root); //add root node to the queue.
 
+        //traverse until empty is found.
         while(!queue.isEmpty()){
             root = queue.peek();
             queue.remove();
 
             if(root.isLeft() == false){
                 root.addChild(value);
+                break;
+            } else {
+                queue.add(root.getLeft());
+            }
+
+            if(root.isRight() == false){
+                root.addChild(value);
+                break;
+            } else {
+                queue.add(root.getRight());
             }
         }
 
-        return;
+        return Optional.of(root);
     }
 
 }

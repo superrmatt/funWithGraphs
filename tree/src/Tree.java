@@ -46,7 +46,7 @@ public class Tree<T> {
      * @param value of type T. The value of the child to add.
      */
     public Tree<T> addChild(T value) {
-         Tree<T> newChild = new Tree<>(value);
+        Tree<T> newChild = new Tree<>(value);
         children.add(newChild);
         return newChild;
     }
@@ -233,13 +233,33 @@ public class Tree<T> {
     // -------------------------- Insert Implementations --------------------------
     /**
      * An insert algorithm
-     * calls breadthFirstSearch(value, root) to find the insertion point.
+     * Inserts at the first empty place in the tree, NOT designed for Search Trees (Ex: BST)
+     * Returns the new Tree with inserted value.
      * @param value of type T, the value to insert.
      * @param root the point on the Tree to insert at.
      */
 
-    public void insert(T value, Tree<T> root){
+    public Tree<T> insert(T value, Tree<T> root){
         
+        root.getClass();
+        if(root == null){
+            root = makeRoot(value);
+            return root;
+        }
+
+        Queue<Tree<T>> queue = new LinkedList<Tree<T>>(); //create queue of nodes
+        queue.add(root); //add root node to the queue.
+
+        while(!queue.isEmpty()){
+            root = queue.peek();
+            queue.remove();
+
+            if(root.isLeft() == false){
+                
+            }
+        }
+
+        return root;
     }
 
 }

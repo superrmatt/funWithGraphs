@@ -222,6 +222,7 @@ public class Tree<T> {
         }
         
         Optional<Tree<T>> node = breadthFirstSearch(value, root); //find the node to remove.
+        //get children of removed node and redistribute them.
         if (node == null){
             System.out.println("Node " + value + "not found");
             return Optional.empty();

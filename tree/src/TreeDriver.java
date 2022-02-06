@@ -31,9 +31,16 @@ public class TreeDriver{
         Tree.preOrderRecursive("O", A);
         Tree.preOrderIterative("O", A);
 
+        System.out.println("----------------Testing Insert----------------");
         //call the insert algo
         A.insert("P", A);
         //test it worked.
+        Tree.breadthFirstSearch("P", A);
+
+        System.out.println("----------------Testing Remove----------------");
+        //call the remove algo
+        A.remove("P", A);
+        //test it worked
         Tree.breadthFirstSearch("P", A);
       }
 }

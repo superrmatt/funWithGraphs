@@ -226,7 +226,6 @@ public class Tree<T> {
             System.out.println("Node " + value + "not found");
             return Optional.empty();
         }
-
         
         return Optional.empty();
     }    

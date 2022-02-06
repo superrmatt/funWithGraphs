@@ -178,6 +178,13 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
                     - If current is the value to search for, return
                     - Else: Get children of current
                 - Node never found S is empty: all nodes traversed.
+- ##### Delete
+    - Find and remove node from the tree, calls breadthFirstSearch to locate the node to be removed.
+        - If node has children, add the children to the next node.
+- ##### Insert
+    - Insert at first empty place in tree. Not functional for Search Trees.
+        - add the new tree (With inserted node) to the root tree.
+
             
 
 

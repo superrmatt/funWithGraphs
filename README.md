@@ -192,7 +192,7 @@ Since trees are graphs, and graphs consist of nodes, trees also consist of nodes
 - Depth First Search - inorder & postorder traversal
 - BSTs
 - More work with trees
-- Remove node from graph
+- Remove node from graphs
 - Remove node from Tree
 - Digraphs
 - With graphs, the possiblities are near endless.
